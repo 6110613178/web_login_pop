@@ -73,8 +73,8 @@
             @yield('content')
         </main>
     </div>
-    @include('auth.login')
-    @include('auth.register')
+    @include('auth.login')  <!-- Import Login Modal -->
+    @include('auth.register') <!-- Import Register Modal -->
 
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('scripts')

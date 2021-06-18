@@ -18,7 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
+
+
+
+// MAIL_MAILER=smtp
+// MAIL_HOST=mailhog
+// MAIL_PORT=1025
+// MAIL_USERNAME=null
+// MAIL_PASSWORD=null
+// MAIL_ENCRYPTION=null
