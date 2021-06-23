@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BuyerPropertyController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-
+use App\Mail\MyTestMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +27,6 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-Route::get('buyerpropertyform', [BuyerPropertyController::class, "index"]);
+Route::get('buyerpropertyform', [App\Http\Controllers\BuyerPropertyController::class, 'index']);
 Route::post('add', [BuyerPropertyController::class, "add"]);
 
-
-// MAIL_MAILER=smtp
-// MAIL_HOST=mailhog
-// MAIL_PORT=1025
-// MAIL_USERNAME=null
-// MAIL_PASSWORD=null
-// MAIL_ENCRYPTION=null

@@ -78,7 +78,7 @@
                             <label for="floor_num" class="col-md-4 col-form-label text-md-right">{{ __('จำนวนชั้น') }}</label>
 
                             <div class="col-md-6">
-                                <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number">
+                                <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -92,7 +92,7 @@
                             <label for="bedroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนอน') }}</label>
 
                             <div class="col-md-6">
-                                <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number">
+                                <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -106,7 +106,7 @@
                             <label for="bathroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องน้ำ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number">
+                                <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -120,7 +120,7 @@
                             <label for="kitchen_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องครัว') }}</label>
 
                             <div class="col-md-6">
-                                <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number">
+                                <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -134,7 +134,7 @@
                             <label for="parking_num" class="col-md-4 col-form-label text-md-right">{{ __('ที่จอดรถ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number">
+                                <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -148,7 +148,7 @@
                             <label for="livingroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนั่งเล่น') }}</label>
 
                             <div class="col-md-6">
-                                <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number">
+                                <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -176,7 +176,7 @@
                             <label for="usable_area_min" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(ต่ำสุด)') }}</label>
 
                             <div class="col-md-6">
-                                <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min">
+                                <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">

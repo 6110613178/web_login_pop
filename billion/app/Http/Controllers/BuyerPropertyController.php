@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class BuyerPropertyController extends Controller
 {
     //
-    function index(){
+    function index() {
         return view('buyerProperty.buyerPropertyForm');
     }
 
