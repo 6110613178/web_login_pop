@@ -26,13 +26,15 @@
                     <form method="POST" action="add">
                         @csrf
 
-                        <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ข้อมูลโครงการ') }}</label>
+                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
                             <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทอสังหาริมทรัพย์') }}</label>
 
                             <div class="col-md-6">
-                                <input id="property_type" type="text" class="form-control" name="property_type" placeholder="Property Type">
+                                <input id="property_type" type="checkbox"> บ้านเดี่ยว  
+                                <input id="property_type" type="checkbox"> บ้านแฝด  
+                                <input id="property_type" type="checkbox"> ทาวน์เฮาส์/ทาวน์โฮม  
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -60,7 +62,9 @@
                             <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภท') }}</label>
 
                             <div class="col-md-6">
-                                <input id="type" type="text" class="form-control" name="type" placeholder="Type">
+                                <input type="checkbox" name="first_hand"> มือ 1
+                                <input type="checkbox" name="second_hand"> มือ 2
+                                
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -74,7 +78,7 @@
                             <label for="floor_num" class="col-md-4 col-form-label text-md-right">{{ __('จำนวนชั้น') }}</label>
 
                             <div class="col-md-6">
-                                <input id="floor_num" type="text" class="form-control" name="floor_num" placeholder="Floor Num">
+                                <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -88,7 +92,7 @@
                             <label for="bedroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนอน') }}</label>
 
                             <div class="col-md-6">
-                                <input id="bedroom_num" type="text" class="form-control" name="bedroom_num" placeholder="Bedroom Num">
+                                <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -102,7 +106,7 @@
                             <label for="bathroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องน้ำ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="bathroom_num" type="text" class="form-control" name="bathroom_num" placeholder="Bathroom Num">
+                                <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -116,7 +120,7 @@
                             <label for="kitchen_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องครัว') }}</label>
 
                             <div class="col-md-6">
-                                <input id="kitchen_num" type="text" class="form-control" name="kitchen_num" placeholder="Kitchen Num">
+                                <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -130,7 +134,7 @@
                             <label for="parking_num" class="col-md-4 col-form-label text-md-right">{{ __('ที่จอดรถ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="parking_num" type="text" class="form-control" name="parking_num" placeholder="Parking Num">
+                                <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -144,7 +148,7 @@
                             <label for="livingroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนั่งเล่น') }}</label>
 
                             <div class="col-md-6">
-                                <input id="livingroom_num" type="text" class="form-control" name="livingroom_num" placeholder="Livingroom Num">
+                                <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number">
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -224,7 +228,7 @@
                             </div>
                         </div>
 
-                        <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ทำเลที่ตั้ง') }}</label>
+                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
 
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
@@ -300,7 +304,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nearby_place" type="text" class="form-control" name="nearby_place" placeholder="Nearby Place">
+                                <input id="nearby_place" type="checkbox"> supermarket
+                                <input id="nearby_place" type="checkbox"> ห้างสรรพสินค้า
+                                <input id="nearby_place" type="checkbox"> BTS
+                                <input id="nearby_place" type="checkbox"> MRT
+                                <input id="nearby_place" type="checkbox"> Airport Link
+                                <input id="nearby_place" type="checkbox"> โรงพยาบาล
+                                <input id="nearby_place" type="checkbox"> สนามบิน
+                                <input id="nearby_place" type="checkbox"> ทางด่วน
+                                <input id="nearby_place" type="checkbox"> โรงเรียน
+                                <input id="nearby_place" type="checkbox"> มหาวิทยาลัย
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -310,7 +323,7 @@
                             </div>
                         </div>
 
-                        <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('ราคา') }}</label>
+                        <label for="price" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ราคา') }}</label>
 
                         <div class="form-group row">
                             <label for="price_range_min" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(ต่ำสุด)') }}</label>
@@ -339,6 +352,8 @@
                                 @enderror -->
                             </div>
                         </div>
+
+                        <p>*คำแนะนำในการค้นหาอสังหาริมทรัพย์</p>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
