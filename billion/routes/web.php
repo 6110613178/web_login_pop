@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BuyerPropertyController;
+use App\Http\Controllers\BuyerPropController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Mail\MyTestMail;
@@ -29,4 +30,6 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 Route::get('buyerpropertyform', [App\Http\Controllers\BuyerPropertyController::class, 'index']);
 Route::post('add', [BuyerPropertyController::class, "add"]);
+
+Route::resource('buyer_prop', BuyerPropController::class);
 
