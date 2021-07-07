@@ -42,18 +42,19 @@ class BuyerPropController extends Controller
     {
         //
         $request->validate([
+            'property' => 'required',
             'property_type' => 'required',
             'project_name' => 'required',
-            'type' => 'required',
-            'floor_num' => 'required',
-            'bedroom_num' => 'required',
-            'bathroom_num' => 'required',
-            'kitchen_num' => 'required',
-            'parking_num' => 'required',
-            'livingroom_num' => 'required',
-            'furniture' => 'required',
-            'usable_area_min' => 'required',
-            'usable_area_max' => 'required',
+            'type',
+            'floor_num',
+            'bedroom_num',
+            'bathroom_num',
+            'kitchen_num',
+            'parking_num',
+            'livingroom_num',
+            'furniture',
+            'usable_area_min',
+            'usable_area_max',
             'area_min' => 'required',
             'area_max' => 'required',
             'alley' => 'required',
@@ -61,58 +62,12 @@ class BuyerPropController extends Controller
             'sub_district' => 'required',
             'district' => 'required',
             'province' => 'required',
-            'nearby_place' => 'required',
+            'nearby_place',
             'price_range_min' => 'required',
             'price_range_max' => 'required',
         ]);
 
         BuyerProp::create($request->all());
-
-        return redirect()->route('buyer_prop.index')
-                        ->with('success', 'Property created successfully.');
-    }
-
-    public function create2()
-    {
-        //
-        return view('buyer_prop.create2');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store2(Request $request)
-    {
-        //
-        $request->validate([
-            'property_type' => 'required',
-            'project_name' => 'required',
-            'type' => 'required',
-            'floor_num' => 'required',
-            'bedroom_num' => 'required',
-            'bathroom_num' => 'required',
-            'kitchen_num' => 'required',
-            'parking_num' => 'required',
-            'livingroom_num' => 'required',
-            'furniture' => 'required',
-            'usable_area_min' => 'required',
-            'usable_area_max' => 'required',
-            'area_min' => 'required',
-            'area_max' => 'required',
-            'alley' => 'required',
-            'road' => 'required',
-            'sub_district' => 'required',
-            'district' => 'required',
-            'province' => 'required',
-            'nearby_place' => 'required',
-            'price_range_min' => 'required',
-            'price_range_max' => 'required',
-        ]);
-
-        BuyerProp::create2($request->all());
 
         return redirect()->route('buyer_prop.index')
                         ->with('success', 'Property created successfully.');
@@ -153,18 +108,19 @@ class BuyerPropController extends Controller
     {
         //
         $request->validate([
+            'property' => 'required',
             'property_type' => 'required',
             'project_name' => 'required',
-            'type' => 'required',
-            'floor_num' => 'required',
-            'bedroom_num' => 'required',
-            'bathroom_num' => 'required',
-            'kitchen_num' => 'required',
-            'parking_num' => 'required',
-            'livingroom_num' => 'required',
-            'furniture' => 'required',
-            'usable_area_min' => 'required',
-            'usable_area_max' => 'required',
+            'type',
+            'floor_num',
+            'bedroom_num',
+            'bathroom_num',
+            'kitchen_num',
+            'parking_num',
+            'livingroom_num',
+            'furniture',
+            'usable_area_min',
+            'usable_area_max',
             'area_min' => 'required',
             'area_max' => 'required',
             'alley' => 'required',
@@ -172,7 +128,7 @@ class BuyerPropController extends Controller
             'sub_district' => 'required',
             'district' => 'required',
             'province' => 'required',
-            'nearby_place' => 'required',
+            'nearby_place',
             'price_range_min' => 'required',
             'price_range_max' => 'required',
         ]);

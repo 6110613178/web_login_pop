@@ -15,6 +15,7 @@ class BuyerPropCrud extends Migration
     {
         Schema::create('buyer_props', function (Blueprint $table) {
             $table->id();
+            $table->text('property');
             $table->text('property_type');
             $table->text('project_name');
             $table->text('type');

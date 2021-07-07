@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2021 at 04:45 PM
+-- Generation Time: Jul 07, 2021 at 11:58 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -24,41 +24,58 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buyerproperty`
+-- Table structure for table `bts`
 --
 
-CREATE TABLE `buyerproperty` (
-  `id` int(11) NOT NULL,
-  `property_type` text NOT NULL,
-  `project_name` text NOT NULL,
-  `type` text NOT NULL,
+CREATE TABLE `bts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buyer_props`
+--
+
+CREATE TABLE `buyer_props` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `floor_num` int(11) NOT NULL,
   `bedroom_num` int(11) NOT NULL,
   `bathroom_num` int(11) NOT NULL,
   `kitchen_num` int(11) NOT NULL,
   `parking_num` int(11) NOT NULL,
   `livingroom_num` int(11) NOT NULL,
-  `furniture` text NOT NULL,
+  `furniture` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `usable_area_min` int(11) NOT NULL,
   `usable_area_max` int(11) NOT NULL,
   `area_min` int(11) NOT NULL,
   `area_max` int(11) NOT NULL,
-  `alley` text NOT NULL,
-  `road` text NOT NULL,
-  `sub_district` text NOT NULL,
-  `district` text NOT NULL,
-  `province` text NOT NULL,
-  `nearby_place` text NOT NULL,
+  `alley` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `road` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_district` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `district` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `province` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nearby_place` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `price_range_min` int(11) NOT NULL,
-  `price_range_max` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `price_range_max` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `buyerproperty`
+-- Dumping data for table `buyer_props`
 --
 
-INSERT INTO `buyerproperty` (`id`, `property_type`, `project_name`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`) VALUES
-(7, 'บ้านเดี่ยว', 'เทส', 'มือ1', 1, 1, 1, 1, 1, 1, 'ครบ', 1, 100, 1, 100, 'เทส', 'เทส', 'เทส', 'เทส', 'เทส', 'เทส', 1, 1000000);
+INSERT INTO `buyer_props` (`id`, `property`, `property_type`, `project_name`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `created_at`, `updated_at`) VALUES
+(1, 'บ้าน', 'ทาวน์เฮาส์/ทาวน์โฮม', 'เทส2', 'มือ 2', 2, 2, 2, 2, 2, 2, 'ไม่ครบ', 2, 200, 2, 200, 'เทส2', 'เทส2', 'เทส2', 'เทส2', 'เทส2', 'ห้างสรรพสินค้า', 2, 2000000, '2021-07-07 01:10:56', '2021-07-07 01:10:56'),
+(2, 'ที่ดิน', 'ที่ดินเปล่า', 'สีเหลือง', 'ติดถนนใหญ่', 0, 0, 0, 0, 0, 0, '-', 0, 0, 1, 100, 'เทส', 'เทส', 'เทส', 'เทส', 'เทส', 'supermarket', 1, 1000000, '2021-07-07 02:23:38', '2021-07-07 02:23:38');
 
 -- --------------------------------------------------------
 
@@ -68,7 +85,7 @@ INSERT INTO `buyerproperty` (`id`, `property_type`, `project_name`, `type`, `flo
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -93,11 +110,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2021_06_21_123428_create_buyer_properties_table', 2),
-(5, '2021_06_21_130510_create_contacts_table', 3);
+(5, '2021_06_21_130510_create_contacts_table', 3),
+(6, '2021_06_24_062441_buyer_prop_crud', 4),
+(7, '2021_06_24_064556_buyer_prop_crud', 5),
+(9, '2014_10_12_000000_create_users_table', 6),
+(10, '2014_10_12_100000_create_password_resets_table', 6),
+(11, '2019_08_19_000000_create_failed_jobs_table', 6),
+(12, '2021_06_24_085203_buyer_prop_crud', 6),
+(13, '2021_07_06_095628_bts_tbl', 7);
 
 -- --------------------------------------------------------
 
@@ -106,8 +127,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -119,11 +140,11 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `is_admin` tinyint(1) DEFAULT NULL,
-  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -134,19 +155,23 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `is_admin`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@admin.com', NULL, 1, '$2y$10$A7A/msH14i1wC5g6VQhOL.5.vRM2zj.GKh96W7sARHFMCde8C.TPq', NULL, '2021-06-09 03:37:28', '2021-06-09 03:37:28'),
-(2, 'User', 'user@user.com', '2021-06-21 02:59:57', 0, '$2y$10$efgrFdwxMLHU7rhQ8qNqieFIAutaOoAQX/XU73/ys0yYzE32r1qWS', NULL, '2021-06-09 03:37:29', '2021-06-21 02:59:57'),
-(3, 'User2', 'user2@user2.com', NULL, NULL, '$2y$10$FJ155IfPWTvW60GuR09nKOIEJhPhhm6rFsGdIfrFDZ/QgsvDycipe', NULL, '2021-06-09 03:57:20', '2021-06-09 03:57:20'),
-(4, 'User3', 'user3@user3.com', NULL, 0, '$2y$10$L0gZYp5LsXRWVT.CBQNGFeLQxXpR2bfaCUSWdDkRcm9pnnp7JaLd.', NULL, '2021-06-09 04:04:42', '2021-06-09 04:04:42');
+(1, 'Admin', 'admin@admin.com', NULL, 1, '$2y$10$I.9V.3Ul06o.yncO7FCfkOFxCfbJqj4fu6VLWVVchiDXKkUH8mniG', NULL, '2021-07-06 02:41:34', '2021-07-06 02:41:34'),
+(2, 'User', 'user@user.com', NULL, 0, '$2y$10$FRrBPbxYAzFTdrhqAXPv9OeKtttsIeDOUn880.08pL83QDHMVyg9u', NULL, '2021-07-06 02:41:34', '2021-07-06 02:41:34');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `buyerproperty`
+-- Indexes for table `bts`
 --
-ALTER TABLE `buyerproperty`
+ALTER TABLE `bts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buyer_props`
+--
+ALTER TABLE `buyer_props`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -180,10 +205,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `buyerproperty`
+-- AUTO_INCREMENT for table `bts`
 --
-ALTER TABLE `buyerproperty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `bts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buyer_props`
+--
+ALTER TABLE `buyer_props`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -195,13 +226,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

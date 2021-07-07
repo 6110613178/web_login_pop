@@ -10,6 +10,7 @@ class BuyerProp extends Model
     use HasFactory;
 
     protected $fillable = [
+        'property',
         'property_type',
         'project_name',
         'type',
