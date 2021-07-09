@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BuyerProp;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BuyerPropController extends Controller
 {
@@ -21,6 +22,45 @@ class BuyerPropController extends Controller
                 ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+
+    function fetch(Request $request) {
+        $id = $request->get('select');
+        $result = array();
+        $query = DB::table('provinces')
+        ->join('amphures', 'provinces.id', '=', 'amphures.province_id')
+
+        ->select('amphures.name_th')
+        ->where('provinces.id', $id) 
+
+        ->groupBy('amphures.name_th')
+        ->get();
+        $output = '<option value="">เลือกอำเภอของท่าน</option>';
+        foreach ($query as $row) {
+            $output.='<option value="'.$row->name_th.'">'.$row->name_th.'</option>';
+        }
+        echo $output;
+        
+    }
+
+    function amphures(Request $request) {
+        $id = $request->get('select');
+        $result = array();
+        $query = DB::table('amphures')
+        ->join('districts', 'amphures.id', '=', 'districts.amphure_id')
+
+        ->select('districts.name_th')
+        ->where('amphures.name_th', $id)
+
+        ->groupBy('districts.name_th')
+        ->get();
+        $output = '<option value="">เลือกตำบลของท่าน</option>';
+        foreach ($query as $row) {
+            $output.='<option value="'.$row->name_th.'">'.$row->name_th.'</option>';
+        }
+        echo $output;
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -29,7 +69,12 @@ class BuyerPropController extends Controller
     public function create()
     {
         //
-        return view('buyer_prop.create');
+        $list = DB::table('provinces')->get();
+        $bts = DB::table('bts')->get();
+        $mrt = DB::table('mrt')->get();
+        return view('buyer_prop.create')->with('bts', $bts)
+        ->with('list', $list)
+        ->with('mrt', $mrt);
     }
 
     /**

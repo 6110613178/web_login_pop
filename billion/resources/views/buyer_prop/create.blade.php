@@ -396,7 +396,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -425,47 +425,36 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="district">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="sub_district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -1165,7 +1154,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -1194,47 +1183,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -1549,7 +1526,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -1578,47 +1555,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -1935,7 +1900,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -1964,47 +1929,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -2323,7 +2276,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -2352,47 +2305,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -2593,7 +2534,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -2622,47 +2563,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -2978,7 +2907,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -3007,47 +2936,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -3365,7 +3282,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -3394,47 +3311,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -3624,7 +3529,7 @@
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-
+                        <br><br><br>
                         <div class="form-group row">
                             <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
 
@@ -3653,47 +3558,35 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="sub_district" class="col-md-4 col-form-label text-md-right">{{ __('ตำบล/แขวง') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
-                        </div>
 
                         <div class="form-group row">
-                            <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('อำเภอ/เขต') }}</label>
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="district" type="text" class="form-control" name="district" placeholder="District">
+                            <!-- select form -->
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('จังหวัด') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="province" type="text" class="form-control" name="province" placeholder="Province">
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
-                            </div>
+                        {{csrf_field()}}
                         </div>
+
 
                         <div class="form-group row">
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
@@ -3764,6 +3657,42 @@
 
 
 <!-- ---------------------------------------------------------- End Warehouse ---------------------------------------------------------- -->
+
+
+<script type="text/javascript">
+    $('.province').change(function() {
+        if($(this).val()!='') {
+            var select = $(this).val();
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+                url:"{{route('fetch')}}",
+                method:"POST",
+                data:{select:select,_token:_token},
+                success:function(result) {
+                    $('.amphures').html(result);
+                }
+            })
+            console.log(select);
+        }
+    });
+
+    $('.amphures').change(function() {
+        if($(this).val()!='') {
+            var select = $(this).val();
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+                url:"{{route('amphures')}}",
+                method:"POST",
+                data:{select:select,_token:_token},
+                success:function(result) {
+                    $('.districts').html(result);
+                }
+            })
+            console.log(select);
+        }
+    });
+
+    </script>
 
 
 @endsection

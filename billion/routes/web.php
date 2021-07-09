@@ -28,4 +28,7 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
+Route::post('provinces/fetch', [App\Http\Controllers\BuyerPropController::class, 'fetch'])->name('fetch');
+Route::post('provinces/amphures', [App\Http\Controllers\BuyerPropController::class, 'amphures'])->name('amphures');
+
 Route::resource('buyer_prop', BuyerPropController::class);
