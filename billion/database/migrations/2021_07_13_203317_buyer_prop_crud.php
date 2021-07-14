@@ -16,6 +16,7 @@ class BuyerPropCrud extends Migration
         Schema::create('buyer_props', function (Blueprint $table) {
             $table->id();
             $table->text('property');
+            $table->text('sell_type');
             $table->text('property_type');
             $table->text('project_name');
             $table->text('type');
@@ -38,6 +39,7 @@ class BuyerPropCrud extends Migration
             $table->text('nearby_place');
             $table->integer('price_range_min');
             $table->integer('price_range_max');
+            $table->text('agent_welcome');
             $table->timestamps();
         });
     }

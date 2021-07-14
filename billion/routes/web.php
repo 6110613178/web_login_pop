@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BuyerPropertyController;
 use App\Http\Controllers\BuyerPropController;
+use App\Http\Controllers\SellerPropController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Mail\MyTestMail;
@@ -32,3 +33,4 @@ Route::post('provinces/fetch', [App\Http\Controllers\BuyerPropController::class,
 Route::post('provinces/amphures', [App\Http\Controllers\BuyerPropController::class, 'amphures'])->name('amphures');
 
 Route::resource('buyer_prop', BuyerPropController::class);
+Route::resource('seller_prop', SellerPropController::class);

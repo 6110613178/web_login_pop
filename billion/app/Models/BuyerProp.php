@@ -11,6 +11,7 @@ class BuyerProp extends Model
 
     protected $fillable = [
         'property',
+        'sell_type',
         'property_type',
         'project_name',
         'type',
@@ -32,6 +33,7 @@ class BuyerProp extends Model
         'province',
         'nearby_place',
         'price_range_min',
-        'price_range_max'
+        'price_range_max',
+        'agent_welcome'
     ];
 }

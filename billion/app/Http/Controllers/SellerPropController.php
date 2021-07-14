@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BuyerProp;
+use App\Models\SellerProp;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class BuyerPropController extends Controller
+class SellerPropController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,9 @@ class BuyerPropController extends Controller
     public function index()
     {
         //
-        $data = BuyerProp::latest()->paginate(5);
+        $data = SellerProp::latest()->paginate(5);
 
-        return view('buyer_prop.index', compact('data'))
+        return view('seller_prop.index', compact('data'))
                 ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -69,12 +68,7 @@ class BuyerPropController extends Controller
     public function create()
     {
         //
-        $list = DB::table('provinces')->get();
-        $bts = DB::table('bts')->get();
-        $mrt = DB::table('mrt')->get();
-        return view('buyer_prop.create')->with('bts', $bts)
-        ->with('list', $list)
-        ->with('mrt', $mrt);
+        return view('seller_prop.create');
     }
 
     /**
@@ -88,7 +82,10 @@ class BuyerPropController extends Controller
         //
         $request->validate([
             'property' => 'required',
+            'seller_status' => 'required',
             'sell_type' => 'required',
+            'topic_name' => 'required',
+            'detail' => 'required',
             'property_type' => 'required',
             'project_name' => 'required',
             'type' => 'required',
@@ -99,64 +96,91 @@ class BuyerPropController extends Controller
             'parking_num' => 'required',
             'livingroom_num' => 'required',
             'furniture' => 'required',
-            'usable_area_min' => 'required',
-            'usable_area_max' => 'required',
-            'area_min' => 'required',
-            'area_max' => 'required',
+            'usable_area' => 'required',
+            'area' => 'required',
+            'holding_pattern' => 'required',
+            'tranfer_date' => 'required',
+            'property_code' => 'required',
+            'ownership_document' => 'required',
             'alley' => 'required',
             'road' => 'required',
             'sub_district' => 'required',
             'district' => 'required',
             'province' => 'required',
+            'google_map_link' => 'required',
             'nearby_place' => 'required',
-            'price_range_min' => 'required',
-            'price_range_max' => 'required',
+            'nearby_bts' => 'required',
+            'nearby_airport_link' => 'required',
+            'nearby_mrt' => 'required',
+            'inside_facility' => 'required',
+            'furniture_thing' => 'required',
+            'special_properties' => 'required',
+            'central_facility' => 'required',
+            'add_zone_protection_room' => 'required',
+            'add_balcony' => 'required',
+            'add_bedroom' => 'required',
+            'add_storageroom' => 'required',
+            'add_office' => 'required',
+            'add_kitchen' => 'required',
+            'add_garage' => 'required',
+            'price' => 'required',
+            'price_per_month' => 'required',
+            'price_central' => 'required',
+            'tranfer_fee_person_responsible' => 'required',
+            'promotion' => 'required',
+            'property_picture' => 'required',
+            'floor_plan_picture' => 'required',
+            'property_video' => 'required',
+            'property_video_url' => 'required',
             'agent_welcome' => 'required'
         ]);
 
-        BuyerProp::create($request->all());
+        SellerProp::create($request->all());
 
-        return redirect()->route('buyer_prop.index')
+        return redirect()->route('seller_prop.index')
                         ->with('success', 'Property created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BuyerProp  $buyerProp
+     * @param  \App\Models\SellerProp  $sellerProp
      * @return \Illuminate\Http\Response
      */
-    public function show(BuyerProp $buyerProp)
+    public function show(SellerProp $sellerProp)
     {
         //
-        return view('buyer_prop.show', compact('buyerProp'));
+        return view('seller_prop.show', compact('sellerProp'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\BuyerProp  $buyerProp
+     * @param  \App\Models\SellerProp  $sellerProp
      * @return \Illuminate\Http\Response
      */
-    public function edit(BuyerProp $buyerProp)
+    public function edit(SellerProp $sellerProp)
     {
         //
-        return view('buyer_prop.edit', compact('buyerProp'));
+        return view('seller_prop.edit', compact('sellerProp'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BuyerProp  $buyerProp
+     * @param  \App\Models\SellerProp  $sellerProp
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BuyerProp $buyerProp)
+    public function update(Request $request, SellerProp $sellerProp)
     {
         //
         $request->validate([
             'property' => 'required',
+            'seller_status' => 'required',
             'sell_type' => 'required',
+            'topic_name' => 'required',
+            'detail' => 'required',
             'property_type' => 'required',
             'project_name' => 'required',
             'type' => 'required',
@@ -167,39 +191,62 @@ class BuyerPropController extends Controller
             'parking_num' => 'required',
             'livingroom_num' => 'required',
             'furniture' => 'required',
-            'usable_area_min' => 'required',
-            'usable_area_max' => 'required',
-            'area_min' => 'required',
-            'area_max' => 'required',
+            'usable_area' => 'required',
+            'area' => 'required',
+            'holding_pattern' => 'required',
+            'tranfer_date' => 'required',
+            'property_code' => 'required',
+            'ownership_document' => 'required',
             'alley' => 'required',
             'road' => 'required',
             'sub_district' => 'required',
             'district' => 'required',
             'province' => 'required',
+            'google_map_link' => 'required',
             'nearby_place' => 'required',
-            'price_range_min' => 'required',
-            'price_range_max' => 'required',
+            'nearby_bts' => 'required',
+            'nearby_airport_link' => 'required',
+            'nearby_mrt' => 'required',
+            'inside_facility' => 'required',
+            'furniture_thing' => 'required',
+            'special_properties' => 'required',
+            'central_facility' => 'required',
+            'add_zone_protection_room' => 'required',
+            'add_balcony' => 'required',
+            'add_bedroom' => 'required',
+            'add_storageroom' => 'required',
+            'add_office' => 'required',
+            'add_kitchen' => 'required',
+            'add_garage' => 'required',
+            'price' => 'required',
+            'price_per_month' => 'required',
+            'price_central' => 'required',
+            'tranfer_fee_person_responsible' => 'required',
+            'promotion' => 'required',
+            'property_picture' => 'required',
+            'floor_plan_picture' => 'required',
+            'property_video' => 'required',
+            'property_video_url' => 'required',
             'agent_welcome' => 'required'
         ]);
 
-        $buyerProp->update($request->all());
+        $sellerProp->update($request->all());
 
-        return redirect()->route('buyer_prop.index')
+        return redirect()->route('seller_prop.index')
                         ->with('success', 'Property updated successfully.');
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BuyerProp  $buyerProp
+     * @param  \App\Models\SellerProp  $sellerProp
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BuyerProp $buyerProp)
+    public function destroy(SellerProp $sellerProp)
     {
         //
-        $buyerProp->delete();
-        return redirect()->route('buyer_prop.index')
+        $sellerProp->delete();
+        return redirect()->route('seller_prop.index')
                         ->with('success', 'Property deleted successfully.');
     }
 }

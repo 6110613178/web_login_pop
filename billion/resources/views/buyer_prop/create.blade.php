@@ -183,14 +183,22 @@
                         <input type="hidden" name="property" value="บ้าน">
 
                         <p>แบบฟอร์มตั้งซื้อบ้าน</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                    <!-- @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror -->
+
+                                </div>
                         </div>
 
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
@@ -203,11 +211,6 @@
                                 <input type="checkbox" name="property_type" value="บ้านแฝด"> บ้านแฝด  
                                 <input type="checkbox" name="property_type" value="ทาวน์เฮาส์/ทาวน์โฮม"> ทาวน์เฮาส์/ทาวน์โฮม  
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -217,11 +220,6 @@
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -232,12 +230,6 @@
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
                                 
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -247,11 +239,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -261,11 +248,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -275,11 +257,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -289,11 +266,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -303,11 +275,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -317,11 +284,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -331,11 +293,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -345,11 +302,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -359,11 +311,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -373,11 +320,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -387,11 +329,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -403,11 +340,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -417,11 +349,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -471,11 +398,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -487,11 +409,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -501,15 +418,18 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
-                        <p>*คำแนะนำในการค้นหาอสังหาริมทรัพย์</p>
+                        <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
+                        <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -557,15 +477,18 @@
                         <input type="hidden" name="property" value="อพาร์ทเม้นท์">
 
                         <p>แบบฟอร์มตั้งซื้ออพาร์ทเม้นท์</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -576,11 +499,6 @@
                                 <input type="checkbox" name="property_type" value="อพาร์ทเม้นท์ขนาดกลาง"> อพาร์ทเม้นท์ขนาดกลาง <br>
                                 <input type="checkbox" name="property_type" value="อพาร์ทเม้นท์ขนาดใหญ่"> อพาร์ทเม้นท์ขนาดใหญ่
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -590,11 +508,6 @@
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -605,12 +518,6 @@
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
                                 
-
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -620,11 +527,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -634,11 +536,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -648,11 +545,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -662,11 +554,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -676,11 +563,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -690,11 +572,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -704,11 +581,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -718,11 +590,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -732,11 +599,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -746,11 +608,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -760,11 +617,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -776,11 +628,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -790,11 +637,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -804,11 +646,6 @@
                             <div class="col-md-6">
                                 <input id="sub_district" type="text" class="form-control" name="sub_district" placeholder="Sub District">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -818,11 +655,6 @@
                             <div class="col-md-6">
                                 <input id="district" type="text" class="form-control" name="district" placeholder="District">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -832,11 +664,6 @@
                             <div class="col-md-6">
                                 <input id="province" type="text" class="form-control" name="province" placeholder="Province">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -855,11 +682,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -871,11 +693,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -885,19 +702,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -943,15 +761,18 @@
                         <input type="hidden" name="property" value="อาคารพาณิชย์">
 
                         <p>แบบฟอร์มตั้งซื้ออาคารพาณิชย์</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -961,11 +782,6 @@
                                 <input type="checkbox" name="property_type" value="อาคารพาณิชย์ 1 คูหา"> อาคารพาณิชย์ 1 คูหา
                                 <input type="checkbox" name="property_type" value="อาคารพาณิชย์มากกว่า 1 คูหาขึ้นไป"> อาคารพาณิชย์มากกว่า 1 คูหาขึ้นไป
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -975,11 +791,6 @@
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -989,13 +800,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1005,11 +810,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1019,11 +819,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1033,11 +828,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1047,11 +837,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1061,11 +846,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1075,11 +855,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1089,11 +864,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1103,11 +873,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1117,11 +882,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1131,11 +891,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1145,11 +900,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1161,11 +911,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1175,11 +920,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1228,11 +968,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1244,11 +979,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -1258,19 +988,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -1333,11 +1064,6 @@
                                 <input type="checkbox" name="property_type" value="คอนโด Low Rise"> คอนโด Low Rise
                                 <input type="checkbox" name="property_type" value="คอนโด High Rise"> คอนโด High Rise
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1347,11 +1073,6 @@
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1361,13 +1082,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1377,11 +1092,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1391,11 +1101,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1405,11 +1110,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1419,11 +1119,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1433,11 +1128,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1447,11 +1137,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1461,11 +1146,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1475,11 +1155,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1489,11 +1164,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1503,11 +1173,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1517,11 +1182,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1533,11 +1193,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1547,11 +1202,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1600,11 +1250,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1616,11 +1261,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -1630,19 +1270,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -1688,15 +1329,18 @@
                         <input type="hidden" name="property" value="ขายดาวน์">
 
                         <p>แบบฟอร์มตั้งซื้อขายดาวน์</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -1707,11 +1351,6 @@
                                 <input type="checkbox" name="property_type" value="อาคารพาณิชย์"> อาคารพาณิชย์  
                                 <input type="checkbox" name="property_type" value="ออฟฟิศ/สำนักงาน"> ออฟฟิศ/สำนักงาน
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1721,11 +1360,6 @@
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1735,13 +1369,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1751,11 +1379,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1765,11 +1388,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1779,11 +1397,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1793,11 +1406,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1807,11 +1415,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1821,11 +1424,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1835,11 +1433,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1849,11 +1442,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1863,11 +1451,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1877,11 +1460,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1891,11 +1469,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1907,11 +1480,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1921,11 +1489,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1974,11 +1537,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -1990,11 +1548,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -2004,19 +1557,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -2062,15 +1616,18 @@
                         <input type="hidden" name="property" value="โรงแรม">
 
                         <p>แบบฟอร์มตั้งซื้อโรงแรม</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -2080,12 +1637,7 @@
                                 <input type="checkbox" name="property_type" value="โรงแรมขนาดเล็ก"> โรงแรมขนาดเล็ก <br>
                                 <input type="checkbox" name="property_type" value="โรงแรมขนาดกลาง"> โรงแรมขนาดกลาง <br>
                                 <input type="checkbox" name="property_type" value="โรงแรมขนาดใหญ่"> โรงแรมขนาดใหญ่ <br>
-                                
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+
                             </div>
                         </div>
 
@@ -2096,11 +1648,7 @@
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
                             <br>
                             <input type="checkbox"><span> ต้องการใบอนุญาตประกอบกิจการโรงแรม</span>
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+
                             </div>
                         </div>
 
@@ -2111,13 +1659,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2127,11 +1669,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2141,11 +1678,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2155,11 +1687,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2169,11 +1696,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2183,11 +1705,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2197,11 +1714,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2211,11 +1723,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2225,11 +1732,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2239,11 +1741,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2253,11 +1750,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2267,11 +1759,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2283,11 +1770,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2297,11 +1779,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2350,11 +1827,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2366,11 +1838,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -2380,19 +1847,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -2449,15 +1917,18 @@
                         <input type="hidden" name="usable_area_max" value=0>
 
                         <p>แบบฟอร์มตั้งซื้อที่ดิน</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -2467,11 +1938,6 @@
                                 <input type="checkbox" name="property_type" value="ที่ดินเปล่า"> ที่ดินเปล่า
                                 <input type="checkbox" name="property_type" value="ที่ดินพร้อมสิ่งปลูกสร้าง"> ที่ดินพร้อมสิ่งปลูกสร้าง
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2491,11 +1957,7 @@
                                     <option value="สีน้ำตาลอ่อน">สีน้ำตาลอ่อน</option>
                                     <option value="สีน้ำเงิน">สีน้ำเงิน</option>
                                 </select>
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+
                                 <input type="checkbox"> ติดถนนใหญ่
                                 <input type="checkbox" style="margin-left: 50px;"> ติดถนนซอย
                                 <br>
@@ -2511,11 +1973,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2525,11 +1982,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2541,11 +1993,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2555,11 +2002,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2608,11 +2050,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2624,11 +2061,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -2638,19 +2070,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -2714,11 +2147,6 @@
                                 <input type="checkbox" name="property_type" value="บ้าน"> บ้าน
                                 <input type="checkbox" name="property_type" value="คอนโด"> คอนโด
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2728,11 +2156,6 @@
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2742,13 +2165,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2758,11 +2175,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2772,11 +2184,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2786,11 +2193,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2800,11 +2202,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2814,11 +2211,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2828,11 +2220,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2842,11 +2229,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2856,11 +2238,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2870,11 +2247,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2884,11 +2256,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2898,11 +2265,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2914,11 +2276,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2928,11 +2285,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2981,11 +2333,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -2997,11 +2344,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -3011,19 +2353,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -3069,15 +2412,18 @@
                         <input type="hidden" name="property" value="รีสอร์ท">
 
                         <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -3088,11 +2434,6 @@
                                 <input type="checkbox" name="property_type" value="รีสอร์ทขนาดกลาง"> รีสอร์ทขนาดกลาง <br>
                                 <input type="checkbox" name="property_type" value="รีสอร์ทขนาดใหญ่"> รีสอร์ทขนาดใหญ่
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3103,11 +2444,7 @@
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
                             <br>
                             <input type="checkbox"><span> ต้องการใบอนุญาตประกอบกิจการรีสอร์ท</span>
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+
                             </div>
                         </div>
 
@@ -3117,13 +2454,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="type" value="มือ 1"> มือ 1
                                 <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3133,11 +2464,6 @@
                             <div class="col-md-6">
                                 <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3147,11 +2473,6 @@
                             <div class="col-md-6">
                                 <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3161,11 +2482,6 @@
                             <div class="col-md-6">
                                 <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3175,11 +2491,6 @@
                             <div class="col-md-6">
                                 <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3189,11 +2500,6 @@
                             <div class="col-md-6">
                                 <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3203,11 +2509,6 @@
                             <div class="col-md-6">
                                 <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3217,11 +2518,6 @@
                             <div class="col-md-6">
                                 <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3231,11 +2527,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3245,11 +2536,6 @@
                             <div class="col-md-6">
                                 <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3259,11 +2545,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3273,11 +2554,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3289,11 +2565,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3303,11 +2574,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3356,11 +2622,6 @@
                                 <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
                                 <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3372,11 +2633,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -3386,19 +2642,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
@@ -3456,15 +2713,18 @@
                         <input type="hidden" name="usable_area_max" value=0>
 
                         <p>แบบฟอร์มตั้งซื้อโกดัง/โรงงาน</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -3474,12 +2734,7 @@
                                 <input type="checkbox" name="property_type" value="โกดัง"> โกดัง
                                 <input type="checkbox" name="property_type" value="โรงงาน"> โรงงาน
                                 <br>
-                                
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+
                             </div>
                             
                         </div>
@@ -3492,11 +2747,7 @@
                                 <input type="checkbox"> ถนนทางเข้ากว้าง <span><input type="text" style="width: 80px;"> เมตร</span><br>
                                 <input type="checkbox"><span> ต้องการใบอนุญาตประกอบกิจการโรงงาน</span><br>
                                 <input type="checkbox"><span> ต้องการซื้อ / เช่า / เซ้ง พร้อมเครื่องจักร</span>
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
+
                             </div>
                         </div>
 
@@ -3506,11 +2757,6 @@
                             <div class="col-md-6">
                                 <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3520,11 +2766,6 @@
                             <div class="col-md-6">
                                 <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3536,11 +2777,6 @@
                             <div class="col-md-6">
                                 <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3550,11 +2786,6 @@
                             <div class="col-md-6">
                                 <input id="road" type="text" class="form-control" name="road" placeholder="Road">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3599,11 +2830,6 @@
                                 <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
                                 <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
@@ -3615,11 +2841,6 @@
                             <div class="col-md-6">
                                 <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>  
 
@@ -3629,19 +2850,20 @@
                             <div class="col-md-6">
                                 <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
 
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
 
                         <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
                         <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
 
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <input type="checkbox">ยินดีรับเอเจ้นท์
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Submit') }}
