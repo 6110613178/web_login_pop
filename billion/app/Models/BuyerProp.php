@@ -14,6 +14,7 @@ class BuyerProp extends Model
         'sell_type',
         'property_type',
         'project_name',
+        'city_plan_color',
         'type',
         'floor_num',
         'bedroom_num',
@@ -34,6 +35,7 @@ class BuyerProp extends Model
         'nearby_place',
         'price_range_min',
         'price_range_max',
-        'agent_welcome'
+        'agent_welcome',
+        'post_allow'
     ];
 }

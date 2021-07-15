@@ -180,7 +180,11 @@
 
                     <form action="{{ route('buyer_prop.store') }}" method="POST">
                         @csrf
+                        
                         <input type="hidden" name="property" value="บ้าน">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อบ้าน</p>
 
@@ -475,6 +479,9 @@
                         @csrf
 
                         <input type="hidden" name="property" value="อพาร์ทเม้นท์">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้ออพาร์ทเม้นท์</p>
 
@@ -759,6 +766,9 @@
                         @csrf
 
                         <input type="hidden" name="property" value="อาคารพาณิชย์">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้ออาคารพาณิชย์</p>
 
@@ -1045,16 +1055,23 @@
                         @csrf
 
                         <input type="hidden" name="property" value="คอนโด">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อคอนโด</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการคอนโด') }}</label>
 
                         <div class="form-group row">
@@ -1327,6 +1344,9 @@
                         @csrf
 
                         <input type="hidden" name="property" value="ขายดาวน์">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อขายดาวน์</p>
 
@@ -1614,6 +1634,9 @@
                         @csrf
 
                         <input type="hidden" name="property" value="โรงแรม">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อโรงแรม</p>
 
@@ -1904,7 +1927,9 @@
                         @csrf
 
                         <input type="hidden" name="property" value="ที่ดิน">
+                        <input type="hidden" name="post_allow" value="-">
 
+                        <input type="hidden" name="project_name" value="-">
                         <input type="hidden" name="type" value=0>
                         <input type="hidden" name="floor_num" value=0>
                         <input type="hidden" name="bedroom_num" value=0>
@@ -1942,10 +1967,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="project_name" class="col-md-4 col-form-label text-md-right">{{ __('สีของที่ดิน (ตามสีของผังเมือง)') }}</label>
+                            <label for="city_plan_color" class="col-md-4 col-form-label text-md-right">{{ __('สีของที่ดิน (ตามสีของผังเมือง)') }}</label>
 
                             <div class="col-md-6">
-                                <select id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
+                                <select id="city_plan_color" type="text" class="form-control" name="city_plan_color" placeholder="City Plan Color">
                                     <option value="สีเหลือง">สีเหลือง</option>
                                     <option value="สีส้ม">สีส้ม</option>
                                     <option value="สีน้ำตาล">สีน้ำตาล</option>
@@ -2127,17 +2152,23 @@
                         @csrf
 
                         <input type="hidden" name="property" value="ใบจอง">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อใบจอง</p>
-                        <div>
-                            <p>ประกาศ</p>
-                            <div style="text-align: center;">
-                                <button>หาซื้อ</button>
-                                <button>หาเช่า</button>
-                                <button>หาเซ้ง</button>
-                            </div>
-                            <br>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
                         </div>
+
                         <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
 
                         <div class="form-group row">
@@ -2410,6 +2441,9 @@
                         @csrf
 
                         <input type="hidden" name="property" value="รีสอร์ท">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
 
@@ -2699,8 +2733,10 @@
                         @csrf
 
                         <input type="hidden" name="property" value="โกดัง/โรงงาน">
+                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="project_name" value="-">
+                        <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="type" value="-">
                         <input type="hidden" name="floor_num" value=0>
                         <input type="hidden" name="bedroom_num" value=0>

@@ -19,6 +19,7 @@ class BuyerPropCrud extends Migration
             $table->text('sell_type');
             $table->text('property_type');
             $table->text('project_name');
+            $table->text('city_plan_color');
             $table->text('type');
             $table->integer('floor_num');
             $table->integer('bedroom_num');
@@ -40,6 +41,7 @@ class BuyerPropCrud extends Migration
             $table->integer('price_range_min');
             $table->integer('price_range_max');
             $table->text('agent_welcome');
+            $table->text('post_allow');
             $table->timestamps();
         });
     }
