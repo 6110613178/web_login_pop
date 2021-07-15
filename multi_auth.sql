@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2021 at 09:25 AM
+-- Generation Time: Jul 15, 2021 at 08:33 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -1070,6 +1070,7 @@ CREATE TABLE `buyer_props` (
   `sell_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city_plan_color` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `floor_num` int(11) NOT NULL,
   `bedroom_num` int(11) NOT NULL,
@@ -1091,6 +1092,7 @@ CREATE TABLE `buyer_props` (
   `price_range_min` int(11) NOT NULL,
   `price_range_max` int(11) NOT NULL,
   `agent_welcome` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `post_allow` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1099,8 +1101,8 @@ CREATE TABLE `buyer_props` (
 -- Dumping data for table `buyer_props`
 --
 
-INSERT INTO `buyer_props` (`id`, `property`, `sell_type`, `property_type`, `project_name`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `agent_welcome`, `created_at`, `updated_at`) VALUES
-(1, 'บ้าน', 'ขาย', 'บ้านเดี่ยว', 'เทส', 'มือ 1', 1, 1, 1, 1, 1, 1, 'ครบ', 1, 100, 1, 100, 'เทส', 'เทส', 'บางเกลือ', 'บางปะกง', '15', 'supermarket', 1, 1000000, 'ใช่', '2021-07-13 22:36:28', '2021-07-13 22:36:28');
+INSERT INTO `buyer_props` (`id`, `property`, `sell_type`, `property_type`, `project_name`, `city_plan_color`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `agent_welcome`, `post_allow`, `created_at`, `updated_at`) VALUES
+(1, 'บ้าน', 'ขาย', 'บ้านเดี่ยว', 'เทส', '-', 'มือ 1', 1, 1, 1, 1, 1, 1, 'ครบ', 1, 100, 1, 100, 'เทส', 'เทส', 'ทรายกองดิน', 'เขตคลองสามวา', '1', 'supermarket', 1, 1000000, 'ใช่', '-', '2021-07-14 23:29:13', '2021-07-14 23:29:13');
 
 -- --------------------------------------------------------
 
@@ -10044,7 +10046,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2021_07_12_071002_seller_prop_crud', 5),
 (8, '2021_07_12_095331_seller_prop_crud', 6),
 (9, '2021_07_13_080258_seller_prop_crud', 7),
-(10, '2021_07_13_203317_buyer_prop_crud', 8);
+(10, '2021_07_13_203317_buyer_prop_crud', 8),
+(11, '2021_07_15_062149_buyer_prop_crud', 9);
 
 -- --------------------------------------------------------
 
@@ -10526,7 +10529,7 @@ ALTER TABLE `geographies`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `mrt`
