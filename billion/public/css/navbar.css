@@ -1,0 +1,71 @@
+/*เพิ่มเติม ( หน้า login )*/
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+  }
+  
+  /* Navbar */
+  @font-face {
+    font-family: 'FC iconic';
+    font-style: 'normal';
+    font-weight: '900';
+    src: url('../font/FC\ Iconic\ Regular.otf'); /* IE9 Compat Modes */
+  }
+  
+  .parallelogram {
+      width: 100px;
+      height: 30px;
+      transform: skewX(-30deg);
+    text-align: center;
+  }
+  
+  .parallelogram-yellow {
+      width: 110px;
+      height: 30px;
+      transform: skewX(-30deg);
+      background-color: #FFC107;
+    text-align: center;
+  }
+  
+  .fc-font-r{
+    transform: skewX(30deg);
+    font-family: 'FC iconic';
+    font-size: 1.3rem;
+  }
+  
+  .collapse. fc-font-r{
+    font-size: 2rem;
+  }
+  
+  .bg-style1 {
+    background: #ccc;
+    position: relative;
+    display: block;
+    z-index: 2;
+  }
+  .bg-style1:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 115%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #C6E8C7;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+    transform-origin: 0 0;
+  }
+  
+  .unpara{
+      transform: skewX(30deg);
+  }
+  
+  .rounded-circle {
+    border-radius: 50% !important;
+  }
+  
