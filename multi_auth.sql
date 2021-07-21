@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2021 at 08:33 AM
+-- Generation Time: Jul 21, 2021 at 09:43 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -1071,6 +1071,9 @@ CREATE TABLE `buyer_props` (
   `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `city_plan_color` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `area_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `business_license` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buy_with_machine` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `floor_num` int(11) NOT NULL,
   `bedroom_num` int(11) NOT NULL,
@@ -1092,17 +1095,9 @@ CREATE TABLE `buyer_props` (
   `price_range_min` int(11) NOT NULL,
   `price_range_max` int(11) NOT NULL,
   `agent_welcome` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_allow` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `buyer_props`
---
-
-INSERT INTO `buyer_props` (`id`, `property`, `sell_type`, `property_type`, `project_name`, `city_plan_color`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `agent_welcome`, `post_allow`, `created_at`, `updated_at`) VALUES
-(1, 'บ้าน', 'ขาย', 'บ้านเดี่ยว', 'เทส', '-', 'มือ 1', 1, 1, 1, 1, 1, 1, 'ครบ', 1, 100, 1, 100, 'เทส', 'เทส', 'ทรายกองดิน', 'เขตคลองสามวา', '1', 'supermarket', 1, 1000000, 'ใช่', '-', '2021-07-14 23:29:13', '2021-07-14 23:29:13');
 
 -- --------------------------------------------------------
 
@@ -10047,7 +10042,14 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2021_07_12_095331_seller_prop_crud', 6),
 (9, '2021_07_13_080258_seller_prop_crud', 7),
 (10, '2021_07_13_203317_buyer_prop_crud', 8),
-(11, '2021_07_15_062149_buyer_prop_crud', 9);
+(11, '2021_07_15_062149_buyer_prop_crud', 9),
+(12, '2021_07_19_081900_seller_prop_crud', 10),
+(13, '2021_07_19_083426_seller_prop_crud', 11),
+(14, '2021_07_19_104825_buyer_prop_crud', 12),
+(15, '2021_07_19_120738_seller_prop_crud', 13),
+(16, '2021_07_20_083030_buyer_prop_crud', 14),
+(17, '2021_07_20_131203_seller_prop_crud', 15),
+(18, '2021_07_20_131549_buyer_prop_crud', 16);
 
 -- --------------------------------------------------------
 
@@ -10192,7 +10194,10 @@ CREATE TABLE `seller_props` (
   `detail` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city_plan_color` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `area_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sell_with_machine` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `floor_num` int(11) NOT NULL,
   `bedroom_num` int(11) NOT NULL,
   `bathroom_num` int(11) NOT NULL,
@@ -10202,10 +10207,14 @@ CREATE TABLE `seller_props` (
   `furniture` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `usable_area` int(11) NOT NULL,
   `area` int(11) NOT NULL,
+  `land_width` int(11) NOT NULL,
+  `land_height` int(11) NOT NULL,
   `holding_pattern` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tranfer_date` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tranfer_date_month` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tranfer_date_year` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `property_code` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `ownership_document` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `business_license` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `alley` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `road` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sub_district` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -10237,6 +10246,7 @@ CREATE TABLE `seller_props` (
   `property_video` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `property_video_url` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `agent_welcome` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `post_allow` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -10511,7 +10521,7 @@ ALTER TABLE `bts`
 -- AUTO_INCREMENT for table `buyer_props`
 --
 ALTER TABLE `buyer_props`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -10529,7 +10539,7 @@ ALTER TABLE `geographies`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `mrt`
@@ -10547,7 +10557,7 @@ ALTER TABLE `provinces`
 -- AUTO_INCREMENT for table `seller_props`
 --
 ALTER TABLE `seller_props`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sub_bts`
