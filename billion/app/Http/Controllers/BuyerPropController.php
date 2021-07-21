@@ -92,6 +92,9 @@ class BuyerPropController extends Controller
             'property_type' => 'required',
             'project_name' => 'required',
             'city_plan_color' => 'required',
+            'area_type' => 'required',
+            'business_license' => 'required',
+            'buy_with_machine' => 'required',
             'type' => 'required',
             'floor_num' => 'required',
             'bedroom_num' => 'required',
@@ -112,8 +115,7 @@ class BuyerPropController extends Controller
             'nearby_place' => 'required',
             'price_range_min' => 'required',
             'price_range_max' => 'required',
-            'agent_welcome' => 'required',
-            'post_allow' => 'required'
+            'agent_welcome' => 'required'
         ]);
 
         BuyerProp::create($request->all());
@@ -162,6 +164,9 @@ class BuyerPropController extends Controller
             'property_type' => 'required',
             'project_name' => 'required',
             'city_plan_color' => 'required',
+            'area_type' => 'required',
+            'business_license' => 'required',
+            'buy_with_machine' => 'required',
             'type' => 'required',
             'floor_num' => 'required',
             'bedroom_num' => 'required',
@@ -182,8 +187,7 @@ class BuyerPropController extends Controller
             'nearby_place' => 'required',
             'price_range_min' => 'required',
             'price_range_max' => 'required',
-            'agent_welcome' => 'required',
-            'post_allow' => 'required'
+            'agent_welcome' => 'required'
         ]);
 
         $buyerProp->update($request->all());

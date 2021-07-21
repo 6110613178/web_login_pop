@@ -22,7 +22,10 @@ class SellerPropCrud extends Migration
             $table->text('detail');
             $table->text('property_type');
             $table->text('project_name');
+            $table->text('city_plan_color');
+            $table->text('area_type');
             $table->text('type');
+            $table->text('sell_with_machine');
             $table->integer('floor_num');
             $table->integer('bedroom_num');
             $table->integer('bathroom_num');
@@ -32,10 +35,14 @@ class SellerPropCrud extends Migration
             $table->text('furniture');
             $table->integer('usable_area');
             $table->integer('area');
+            $table->integer('land_width');
+            $table->integer('land_height');
             $table->text('holding_pattern');
-            $table->text('tranfer_date');
+            $table->text('tranfer_date_month');
+            $table->text('tranfer_date_year');
             $table->text('property_code');
             $table->text('ownership_document');
+            $table->text('business_license');
             $table->text('alley');
             $table->text('road');
             $table->text('sub_district');
@@ -67,6 +74,7 @@ class SellerPropCrud extends Migration
             $table->text('property_video');
             $table->text('property_video_url');
             $table->text('agent_welcome');
+            $table->text('post_allow');
             $table->timestamps();
         });
     }

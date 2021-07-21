@@ -88,7 +88,10 @@ class SellerPropController extends Controller
             'detail' => 'required',
             'property_type' => 'required',
             'project_name' => 'required',
+            'city_plan_color' => 'required',
+            'area_type' => 'required',
             'type' => 'required',
+            'sell_with_machine' => 'required',
             'floor_num' => 'required',
             'bedroom_num' => 'required',
             'bathroom_num' => 'required',
@@ -98,10 +101,14 @@ class SellerPropController extends Controller
             'furniture' => 'required',
             'usable_area' => 'required',
             'area' => 'required',
+            'land_width' => 'required',
+            'land_height' => 'required',
             'holding_pattern' => 'required',
-            'tranfer_date' => 'required',
+            'tranfer_date_month' => 'required',
+            'tranfer_date_year' => 'required',
             'property_code' => 'required',
             'ownership_document' => 'required',
+            'business_license' => 'required',
             'alley' => 'required',
             'road' => 'required',
             'sub_district' => 'required',
@@ -132,7 +139,8 @@ class SellerPropController extends Controller
             'floor_plan_picture' => 'required',
             'property_video' => 'required',
             'property_video_url' => 'required',
-            'agent_welcome' => 'required'
+            'agent_welcome' => 'required',
+            'post_allow' => 'required'
         ]);
 
         SellerProp::create($request->all());
@@ -183,7 +191,10 @@ class SellerPropController extends Controller
             'detail' => 'required',
             'property_type' => 'required',
             'project_name' => 'required',
+            'city_plan_color' => 'required',
+            'area_type' => 'required',
             'type' => 'required',
+            'sell_with_machine' => 'required',
             'floor_num' => 'required',
             'bedroom_num' => 'required',
             'bathroom_num' => 'required',
@@ -193,10 +204,14 @@ class SellerPropController extends Controller
             'furniture' => 'required',
             'usable_area' => 'required',
             'area' => 'required',
+            'land_width' => 'required',
+            'land_height' => 'required',
             'holding_pattern' => 'required',
-            'tranfer_date' => 'required',
+            'tranfer_date_month' => 'required',
+            'tranfer_date_year' => 'required',
             'property_code' => 'required',
             'ownership_document' => 'required',
+            'business_license' => 'required',
             'alley' => 'required',
             'road' => 'required',
             'sub_district' => 'required',
@@ -227,7 +242,8 @@ class SellerPropController extends Controller
             'floor_plan_picture' => 'required',
             'property_video' => 'required',
             'property_video_url' => 'required',
-            'agent_welcome' => 'required'
+            'agent_welcome' => 'required',
+            'post_allow' => 'required'
         ]);
 
         $sellerProp->update($request->all());

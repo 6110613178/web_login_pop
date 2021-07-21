@@ -17,7 +17,10 @@ class SellerProp extends Model
         'detail',
         'property_type',
         'project_name',
+        'city_plan_color',
+        'area_type',
         'type',
+        'sell_with_machine',
         'floor_num',
         'bedroom_num',
         'bathroom_num',
@@ -27,10 +30,14 @@ class SellerProp extends Model
         'furniture',
         'usable_area',
         'area',
+        'land_width',
+        'land_heigth',
         'holding_pattern',
-        'tranfer_date',
+        'tranfer_date_month',
+        'tranfer_date_year',
         'property_code',
         'ownership_document',
+        'business_license',
         'alley',
         'road',
         'sub_district',
@@ -61,6 +68,7 @@ class SellerProp extends Model
         'floor_plan_picture',
         'property_video',
         'property_video_url',
-        'agent_welcome'
+        'agent_welcome',
+        'post_allow'
     ];
 }

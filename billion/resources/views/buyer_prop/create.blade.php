@@ -5,167 +5,198 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 
-<div class="container">
+<div class="container faded">
 
-<div>
-<button id="House" type="button" onclick="loadDoc()">House</button>
-<button id="Apartment">Apartment</button>
-<button id="Commercial-Building">Commercial Building</button>
-<button id="Condo">Condo</button>
-<button id="Down">Down</button>
-<button id="Hotel">Hotel</button>
-<button id="Land">Land</button>
-<button id="Pre-Emption">Pre-Emption</button>
-<button id="Resort">Resort</button>
-<button id="Warehouse">Warehouse</button>
-</div>
-
-<script>
-    $(document).ready(function(){
-  $(".House").show("slow");
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  $("#House").click(function(){
+    <script>
+        $(document).ready(function(){
     $(".House").show("slow");
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-
-  $("#Apartment").click(function(){
-    $(".Apartment").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Commercial-Building").click(function(){
-    $(".Commercial-Building").show("slow");
-    $(".House").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Condo").click(function(){
-    $(".Condo").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Down").click(function(){
-    $(".Down").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Hotel").click(function(){
-    $(".Hotel").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Land").click(function(){
-    $(".Land").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Pre-Emption").click(function(){
-    $(".Pre-Emption").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Resort").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Resort").click(function(){
-    $(".Resort").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Warehouse").hide();
-  });
-  $("#Warehouse").click(function(){
-    $(".Warehouse").show("slow");
-    $(".House").hide();
-    $(".Commercial-Building").hide();
-    $(".Apartment").hide();
-    $(".Condo").hide();
-    $(".Down").hide();
-    $(".Hotel").hide();
-    $(".Land").hide();
-    $(".Pre-Emption").hide();
-    $(".Resort").hide();
-  });
-
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    $("#House").click(function(){
+        $(".House").show("slow");
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
     });
 
-</script>
+    $("#Apartment").click(function(){
+        $(".Apartment").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Commercial-Building").click(function(){
+        $(".Commercial-Building").show("slow");
+        $(".House").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Condo").click(function(){
+        $(".Condo").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Down").click(function(){
+        $(".Down").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Hotel").click(function(){
+        $(".Hotel").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Land").click(function(){
+        $(".Land").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Pre-Emption").click(function(){
+        $(".Pre-Emption").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Resort").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Resort").click(function(){
+        $(".Resort").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Warehouse").hide();
+    });
+    $("#Warehouse").click(function(){
+        $(".Warehouse").show("slow");
+        $(".House").hide();
+        $(".Commercial-Building").hide();
+        $(".Apartment").hide();
+        $(".Condo").hide();
+        $(".Down").hide();
+        $(".Hotel").hide();
+        $(".Land").hide();
+        $(".Pre-Emption").hide();
+        $(".Resort").hide();
+    });
 
+        });
+
+    </script>
+    <div class="row justify-content-center pt-0">
+        <div class="col-2 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-8 col-xl-8 col-xxl-8 text-center my-0">
+            <h2 class="my-0">ลงประกาศค้นหาทรัพย์</h2>
+        </div>
+    </div>
+    <div class="d-none d-lg-block">
+        <div class="row justify-content-center pt-0">
+            <div class="col-2"></div>
+            <div class="col-12 col-lg-8 col-xl-8 col-xxl-8">
+                <div class="row pt-0">
+                    <div class="col-2">
+                        <img src="<?php echo asset('img/progress_circle.svg'); ?>" class="rounded-circle" width="60x" height="60px" alt="..." style="object-fit:cover">
+                    </div>
+                    <div class="col text-right">
+                        <p>ความสมบูรณ์ของข้อมูล</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-lg-none">
+        <div class="row">
+            <div class="col-8 justify-content-center">
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="House">
-                <div class="card-header">{{ __('Add House') }}</div>
-
-                <div class="card-body">
-
+        <div class="d-none d-lg-block">  
+            <div class="col-2">
+                <div class="btn-group-vertical">
+                    <button class="btn button_list shadow" type="button" id="House" onclick="loadDoc()">House</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Apartment">Apartment</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Commercial-Building">Commercial Building</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Condo">Condo</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Down">Down</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Hotel">Hotel</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Land">Land</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Pre-Emption">Pre-Emption</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Resort">Resort</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Warehouse">Warehouse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="d-inline">
+                <div class="House">
+                    
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <strong>Whoops!</strong>
@@ -177,7 +208,6 @@
                             </ul>
                         </div>
                     @endif
-
                     <form action="{{ route('buyer_prop.store') }}" method="POST">
                         @csrf
                         
@@ -185,269 +215,343 @@
                         <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
-                        <p>แบบฟอร์มตั้งซื้อบ้าน</p>
-
-                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
-
-                        <div class="form-group row">
-                            <div class="col-md-6">
-                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
-                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
-                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
-
-                                    <!-- @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror -->
-
+                        <div class="card mb-4">
+                            <div class="card-header card_green1 text-center" style="width: 140px;border-top-left-radius: 1.5rem;">
+                                <label for="sell_type" class="text-center m-0 p-0">
+                                        <h3 class="m-0 p-0" style="font-weight: bold;" >ประกาศ</h3>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <div class="row justify-content-center px-0">
+                                    <div class="col-4 text-center text-sm-right">
+                                        <input type="checkbox" class="btn-check" style="display:none;" id="btn-check-ขายบ้าน" autocomplete="off" name="sell_type" value="ขาย">
+                                        <label class="btn btn_custom rounded-pill" style="width:90px; font-size: 2rem;" for="btn-check-ขายบ้าน">ขาย</label>
+                                    </div>
+                                    <div class="col-4 text-center px-0">
+                                        <input type="checkbox" class="btn-check" style="display: none;" id="btn-check-เช่าบ้าน" autocomplete="off" name="sell_type" value="เช่า">
+                                        <label class="btn btn_custom rounded-pill" style="width:90px; font-size: 2rem;" for="btn-check-เช่าบ้าน">เช่า</label>
+                                    </div>
+                                    <div class="col-4 text-center text-sm-left px-0">
+                                        <input type="checkbox" class="btn-check" style="display:none;" id="btn-check-ขายเซ้ง" autocomplete="off" name="sell_type" value="ขายเซ้ง">
+                                        <label class="btn btn_custom rounded-pill" style="width:90px; font-size: 2rem;" for="btn-check-ขายเซ้ง">ขายเช่า</label>
+                                    </div>  
                                 </div>
+                                <!-- @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror -->
+                            </div>
+                        </div>
+                        <input type="hidden" name="city_plan_color" value="-">
+                        <!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+                        <div class="card mb-4">
+                            <div class="card-header card_green1 text-center" style="width: 140px;border-top-left-radius: 1.5rem;">
+                                <label for="property_type">
+                                    <h3 class="m-0 p-0" style="font-weight: bold;">ข้อมูลโครงการ</h3>
+                                </label>
+                            </div>
+                            
+
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row">
+                                    <label for="property_type" class="col-12 m-0 p-0 my-2 topic_style">
+                                        ประเภทอสังหาริมทรัพย์
+                                    </label>
+                                    <div class="col-12 col-md form-check form-check-inline">
+                                        <input class="form-check-input m-2" type="radio" name="property_type" value="บ้านเดี่ยว">
+                                        <label class="form-check-label m-2 content_style" for="property_type">บ้านเดี่ยว</label>
+                                    </div>
+                                    <div class="col-12 col-md form-check form-check-inline">
+                                        <input class="form-check-input m-2" type="radio" name="property_type" value="บ้านแฝด">
+                                        <label class="form-check-label m-2 content_style" for="property_type">บ้านแฝด</label>
+                                    </div>
+                                    <div class="col-12 col-md form-check form-check-inline">
+                                        <input class="form-check-input m-2" type="radio" name="property_type" value="ทาวน์เฮาส์/ทาวน์โฮม">
+                                        <label class="form-check-label m-2 content_style" for="property_type">ทาวน์เฮาส์/ทาวน์โฮม</label>
+                                    </div>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row">
+                                    <label for="project_name" class="col-12 m-0 p-0 topic_style">
+                                        ชื่อโครงการ
+                                    </label>
+                                    <div class="col-10 mt-2 p-0">
+                                    <input id="project_name" type="text" class="form-control rounded-pill" name="project_name" placeholder="Project Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row margin-padding-form">
+                                    <label for="type" class="col-12 m-0 p-0 topic_style">
+                                        ประเภท
+                                    </label>
+                                    <div class="col-12 col-md form-check form-check-inline">
+                                        <input class="form-check-input m-2" type="radio" name="type" value="มือ 1">
+                                        <label class="form-check-label m-2 content_style" for="type">มือ 1</label>
+                                    </div>
+                                    <div class="col-12 col-md form-check form-check-inline">
+                                        <input class="form-check-input m-2" type="radio" name="type" value="มือ 2">
+                                        <label class="form-check-label m-2 content_style" for="type">มือ 2</label>
+                                    </div>
+                                    <div class="col-12 col-md form-check form-check-inline"></div>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row margin-padding-form">
+                                    <div class="col-11 col-md form-check mr-3 p-0">
+                                        <label for="floor_num" class="sub_style">
+                                            จำนวนชั้น
+                                        </label>
+                                        <input id="floor_num" type="number" class="form-control rounded-pill" name="floor_num" placeholder="Floor Number" min="1">
+                                        <br/>
+                                        <label for="kitchen_num"class="sub_style">
+                                            ห้องครัว
+                                        </label>
+                                        <input id="kitchen_num" type="number" class="form-control rounded-pill" name="kitchen_num" placeholder="Kitchen Number" min="0">
+                                    </div>
+                                    <div class="col-11 col-md form-check mr-3 p-0">
+                                        <label for="bedroom_num"class="sub_style">
+                                            ห้องนอน
+                                        </label>
+                                        <input id="bedroom_num" type="number" class="form-control rounded-pill" name="bedroom_num" placeholder="Bedroom Number" min="0">
+                                        <br/>
+                                        <label for="parking_num"class="sub_style">
+                                            ที่จอดรถ
+                                        </label>
+                                        <input id="parking_num" type="number" class="form-control rounded-pill" name="parking_num" placeholder="Parking Number" min="0">
+                                    </div>
+                                    <div class="col-11 col-md form-check mr-3 p-0">
+                                        <label for="bathroom_num"class="sub_style">
+                                            ห้องน้ำ
+                                        </label>
+                                        <input id="bathroom_num" type="number" class="form-control rounded-pill" name="bathroom_num" placeholder="Bathroom Number" min="0">
+                                        <br/>
+                                        <label for="livingroom_num"class="sub_style">
+                                            ห้องนั่งเล่น
+                                        </label>
+                                        <input id="livingroom_num" type="number" class="form-control rounded-pill" name="livingroom_num" placeholder="Livingroom Number" min="0">
+                                    </div>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2 pt-0"></div>
+                                <div class="col row pt-0">
+                                    <label for="furniture" class="col-12 m-0 p-0 topic_style">
+                                        เฟอร์นิเจอร์
+                                    </label>
+                                    <div class="col-11 col-md-10 mt-2 p-0">
+                                    <input id="furniture" type="text" class="form-control rounded-pill" name="furniture" placeholder="Furniture">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row margin-padding-form">
+                                    <label for="type" class="col-12 m-0 p-0 topic_style">
+                                        พื้นที่ใช้สอย(ตร.ม.)
+                                    </label>
+                                    
+                                    <div class="col-11 col-md form-check mr-3 m-0 p-0">
+                                        <label for="usable_area_min" class="sub_style">
+                                            พื้นที่ใช้สอย(ต่ำสุด)
+                                        </label>
+                                        <input id="usable_area_min" type="text" class="form-control rounded-pill" name="usable_area_min" placeholder="Usable Area Min" >
+                                    </div>
+                                    <div class="col-11 col-md form-check m-0 p-0">
+                                        <label for="usable_area_max" class="sub_style">
+                                            พื้นที่ใช้สอย(สูงสุด)
+                                        </label>
+                                        <input id="usable_area_max" type="text" class="form-control rounded-pill" name="usable_area_max" placeholder="Usable Area Max">
+                                    </div>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row margin-padding-form">
+                                    <label for="type" class="col-12 m-0 p-0 topic_style">
+                                        เนื้อที่(ตร.วา)
+                                    </label>
+                                    <div class="col-11 col-md form-check mr-3 m-0 p-0">
+                                        <label for="area_min" class="sub_style">
+                                            เนื้อที่(ต่ำสุด)
+                                        </label>
+                                        <input id="area_min" type="text" class="form-control rounded-pill" name="area_min" placeholder="Area Min">
+                                    </div>
+                                    <div class="col-11 col-md form-check  m-0 p-0">
+                                        <label for="area_max" class="sub_style">
+                                            เนื้อที่(สูงสุด)
+                                        </label>
+                                        <input id="area_max" type="text" class="form-control rounded-pill" name="area_max" placeholder="Area Max">
+                                    </div>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
+                        <div class="card mb-4">
+                            <div class="card-header card_green1 text-center" style="width: 140px;border-top-left-radius: 1.5rem;">
+                                <label for="property_type">
+                                    <h3 class="m-0 p-0" style="font-weight: bold;">ทำเลที่ตั้ง</h3>
+                                </label>
+                            </div>
+                            <div class="form-group row margin-padding-form">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row margin-padding-form">
+                                    <div class="col-11 col-md-5 form-check mr-3 m-0 p-0">
+                                        <label class="sub_style" for="alley">
+                                            ซอย
+                                        </label>
+                                        <input id="alley" type="text" class="form-control rounded-pill mb-3" name="alley" placeholder="Alley">
+                                    </div>
+                                    <div class="col-11 col-md-5 form-check mr-3 m-0 p-0">
+                                        <label class="sub_style" for="road" >
+                                            ถนน
+                                        </label>
+                                        <input id="road" type="text" class="form-control rounded-pill mb-3" name="road" placeholder="Road">
+                                    </div>
+                                    
+                                    
+                                    <select class="province rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="province" id="province">
+                                        <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                        @foreach($list as $row)
+                                            <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        @endforeach
+                                    </select>
+                                    <select class="amphures rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="district">
+                                        <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                    </select>
+                                    <select class="districts rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="sub_district">
+                                        <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                    </select>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2 col-md-1"></div>
+                                <div class="col m-0 p-0">
+                                    <label class="topic_style" for="nearby_place">
+                                        สถานที่ใกล้เคียง
+                                    </label>
+                                    <div class="row pt-0">
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="supermarket">
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">Supermarket</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า">
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">ห้างสรรพสินค้า</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="BTS"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">BTS</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="MRT"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">MRT</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="Airport Link">
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">Airport Link</label>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 col-md form-check-inline justify-content-center-xs">
+                                        <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">โรงพยาบาล</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="สนามบิน"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">สนามบิน</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="ทางด่วน"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">ทางด่วน</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                        <input name="nearby_place" type="checkbox" value="โรงเรียน"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">โรงเรียน</label>
+                                        </div>
+                                        <div class="col-12 col-md form-check-inline">
+                                            <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> 
+                                            <label class="form-check-label ml-2 content_style" for="nearby_place">มหาวิทยาลัย</label>
+                                        </div>
+                                    </div>      
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            {{csrf_field()}}
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header card_green1 text-center" style="width: 140px;border-top-left-radius: 1.5rem;">
+                                <label for="price">
+                                    <h3 class="m-0 p-0" style="font-weight: bold;">ราคา</h3>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group row margin-padding-form mt-3">
+                                <div class="col-1 col-lg-2"></div>
+                                <div class="col row margin-padding-form">
+                                    <label for="type" class="col-12 m-0 p-0 topic_style">
+                                        ช่วงราคาที่ต้องการ (บาท)
+                                    </label>
+                                    
+                                    <div class="col-11 col-md form-check mr-3 m-0 p-0">
+                                        <label for="price_range_min" class="sub_style">
+                                            ช่วงราคาที่ต้องการ(ต่ำสุด)
+                                        </label>
+                                        <input id="price_range_min" type="text" class="form-control rounded-pill" name="price_range_min" placeholder="Price Range Min">
+                                    </div>
+                                    <div class="col-11 col-md form-check m-0 p-0">
+                                        <label for="price_range_max" class="sub_style">
+                                            ช่วงราคาที่ต้องการ(สูงสุด)
+                                        </label>
+                                        <input id="price_range_max" type="text" class="form-control rounded-pill" name="price_range_max" placeholder="Price Range Max">
+                                    </div>
+                                    <div class="col-1 col-lg-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-0 p-0">
+                            <div class="col-1">
+                                <img src="<?php echo asset('img/bulb-icon.svg'); ?>" class="rounded float-right" width="30x" height="30px" alt="..." style="object-fit:cover;">
+                            </div>
+                            <div class="col">
+                                <p class="m-0 p-0" style="font-size: 2rem;"><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
+                                <p style="font-size: 1.5rem;">ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
-                            <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทอสังหาริมทรัพย์') }}</label>
-
-                            <div class="col-md-6">
-                                <input type="checkbox" name="property_type" value="บ้านเดี่ยว"> บ้านเดี่ยว  
-                                <input type="checkbox" name="property_type" value="บ้านแฝด"> บ้านแฝด  
-                                <input type="checkbox" name="property_type" value="ทาวน์เฮาส์/ทาวน์โฮม"> ทาวน์เฮาส์/ทาวน์โฮม  
-
+                            <div class="col d-flex align-items-end">
+                                <input class="m-2" name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="project_name" class="col-md-4 col-form-label text-md-right">{{ __('ชื่อโครงการ') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภท') }}</label>
-
-                            <div class="col-md-6">
-                                <input type="checkbox" name="type" value="มือ 1"> มือ 1
-                                <input type="checkbox" name="type" value="มือ 2"> มือ 2
-                                
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="floor_num" class="col-md-4 col-form-label text-md-right">{{ __('จำนวนชั้น') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="bedroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนอน') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="bathroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องน้ำ') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="kitchen_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องครัว') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="parking_num" class="col-md-4 col-form-label text-md-right">{{ __('ที่จอดรถ') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="livingroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนั่งเล่น') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="furniture" class="col-md-4 col-form-label text-md-right">{{ __('เฟอร์นิเจอร์') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="usable_area_min" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(ต่ำสุด)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="usable_area_max" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(สูงสุด)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="area_min" class="col-md-4 col-form-label text-md-right">{{ __('เนื้อที่(ต่ำสุด)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="area_max" class="col-md-4 col-form-label text-md-right">{{ __('เนื้อที่(สูงสุด)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
-
-                            </div>
-                        </div>
-
-                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
-                        <br><br><br>
-                        <div class="form-group row">
-                            <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="road" class="col-md-4 col-form-label text-md-right">{{ __('ถนน') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="road" type="text" class="form-control" name="road" placeholder="Road">
-
-                            </div>
-                        </div>
-
-
-                        <div class="form-group row">
-                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
-
-                            <!-- select form -->
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <select class="province" name="province" id="province">
-                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
-                                    @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="amphures" name="district">
-                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="districts" name="sub_district">
-                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
-                                </select>
-                            </div>
-                        </div>
-                        {{csrf_field()}}
-                        </div>
-
-
-
-                        <div class="form-group row">
-                            <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
-
-                            <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
-
-                            </div>
-                        </div>
-
-                        <label for="price" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ราคา') }}</label>
-
-                        <div class="form-group row">
-                            <label for="price_range_min" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(ต่ำสุด)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
-
-                            </div>
-                        </div>  
-
-                        <div class="form-group row">
-                            <label for="price_range_max" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(สูงสุด)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
-
-                            </div>
-                        </div>
-
-                        <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
-                        <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
-
-                        <div class="form-group row">
-                            <div class="col-md-6">
-                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Submit') }}
+                            <div class="col text-center">
+                                <button type="submit" class="btn button_list">
+                                    Submit
                                 </button>
                             </div>
+                            <div class="col"></div>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
 
 
 <!-- ---------------------------------------------------------- End House ---------------------------------------------------------- -->
@@ -479,9 +583,11 @@
                         @csrf
 
                         <input type="hidden" name="property" value="อพาร์ทเม้นท์">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้ออพาร์ทเม้นท์</p>
 
@@ -766,9 +872,11 @@
                         @csrf
 
                         <input type="hidden" name="property" value="อาคารพาณิชย์">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้ออาคารพาณิชย์</p>
 
@@ -1055,9 +1163,11 @@
                         @csrf
 
                         <input type="hidden" name="property" value="คอนโด">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อคอนโด</p>
 
@@ -1344,9 +1454,11 @@
                         @csrf
 
                         <input type="hidden" name="property" value="ขายดาวน์">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อขายดาวน์</p>
 
@@ -1634,9 +1746,10 @@
                         @csrf
 
                         <input type="hidden" name="property" value="โรงแรม">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อโรงแรม</p>
 
@@ -1669,8 +1782,14 @@
 
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
-                            <br>
-                            <input type="checkbox"><span> ต้องการใบอนุญาตประกอบกิจการโรงแรม</span>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="business_license" value="-"> ต้องการใบอนุญาตประกอบกิจการโรงแรม
 
                             </div>
                         </div>
@@ -1927,9 +2046,10 @@
                         @csrf
 
                         <input type="hidden" name="property" value="ที่ดิน">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="project_name" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
                         <input type="hidden" name="type" value=0>
                         <input type="hidden" name="floor_num" value=0>
                         <input type="hidden" name="bedroom_num" value=0>
@@ -1983,11 +2103,11 @@
                                     <option value="สีน้ำเงิน">สีน้ำเงิน</option>
                                 </select>
 
-                                <input type="checkbox"> ติดถนนใหญ่
-                                <input type="checkbox" style="margin-left: 50px;"> ติดถนนซอย
-                                <br>
-                                <input type="checkbox"> ถนนกว้าง <span><input type="text" style="width: 100px;">เมตร</span>
-                                <input type="checkbox"> ถมแล้ว
+                                <input name="area_type" type="checkbox" value="ติดถนนใหญ่"> ติดถนนใหญ่
+                                <input name="area_type" type="checkbox" value="ติดถนนซอย"> ติดถนนซอย
+                                <input name="area_type" type="checkbox" value="ถนนกว้าง"> ถนนกว้าง <span><input type="text" style="width: 100px;">เมตร</span>
+                                <input name="area_type" type="checkbox" value="ถมแล้ว"> ถมแล้ว
+                        
                             </div>
                         </div>
 
@@ -2152,9 +2272,12 @@
                         @csrf
 
                         <input type="hidden" name="property" value="ใบจอง">
-                        <input type="hidden" name="post_allow" value="-">
 
+                        <input type="hidden" name="type" value="-">
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อใบจอง</p>
 
@@ -2177,6 +2300,7 @@
                             <div class="col-md-6">
                                 <input type="checkbox" name="property_type" value="บ้าน"> บ้าน
                                 <input type="checkbox" name="property_type" value="คอนโด"> คอนโด
+                                <input type="checkbox" name="property_type" value="ออฟฟิศ/สำนักงาน"> ออฟฟิศ/สำนักงาน
 
                             </div>
                         </div>
@@ -2186,16 +2310,6 @@
 
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภท') }}</label>
-
-                            <div class="col-md-6">
-                                <input type="checkbox" name="type" value="มือ 1"> มือ 1
-                                <input type="checkbox" name="type" value="มือ 2"> มือ 2
 
                             </div>
                         </div>
@@ -2441,9 +2555,10 @@
                         @csrf
 
                         <input type="hidden" name="property" value="รีสอร์ท">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
 
@@ -2476,8 +2591,14 @@
 
                             <div class="col-md-6">
                                 <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
-                            <br>
-                            <input type="checkbox"><span> ต้องการใบอนุญาตประกอบกิจการรีสอร์ท</span>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="business_license" value="ใช่"> ต้องการใบอนุญาตประกอบกิจการโรงแรม
 
                             </div>
                         </div>
@@ -2733,7 +2854,6 @@
                         @csrf
 
                         <input type="hidden" name="property" value="โกดัง/โรงงาน">
-                        <input type="hidden" name="post_allow" value="-">
 
                         <input type="hidden" name="project_name" value="-">
                         <input type="hidden" name="city_plan_color" value="-">
@@ -2776,13 +2896,26 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="project_name" class="col-md-4 col-form-label text-md-right"></label>
 
                             <div class="col-md-6">
-                                
-                                <input type="checkbox"> ถนนทางเข้ากว้าง <span><input type="text" style="width: 80px;"> เมตร</span><br>
-                                <input type="checkbox"><span> ต้องการใบอนุญาตประกอบกิจการโรงงาน</span><br>
-                                <input type="checkbox"><span> ต้องการซื้อ / เช่า / เซ้ง พร้อมเครื่องจักร</span>
+                                <input type="checkbox" name="area_type" value="ถนนทางเข้ากว้าง"> ถนนทางเข้ากว้าง <span><input type="text" style="width: 100px;">เมตร</span>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="business_license" value="ใช่"> ต้องการใบอนุญาตประกอบกิจการโรงงาน
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="buyer_with_machi" value="ใช่"> ต้องการซื้อ/เช่า/เซ้งพร้อมเครื่องจักร
 
                             </div>
                         </div>
