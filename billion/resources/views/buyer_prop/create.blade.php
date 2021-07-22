@@ -8,144 +8,196 @@
   
 
 <div class="container faded">
-
-    <script>
-        $(document).ready(function(){
+<script>
+    $(document).ready(function(){
+  $(".House").show("slow");
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  $("#House").click(function(){
     $(".House").show("slow");
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    $("#House").click(function(){
-        $(".House").show("slow");
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Apartment").click(function(){
+    $(".Apartment").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Commercial-Building").click(function(){
+    $(".Commercial-Building").show("slow");
+    $(".House").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Condo").click(function(){
+    $(".Condo").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Down").click(function(){
+    $(".Down").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Hotel").click(function(){
+    $(".Hotel").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Land").click(function(){
+    $(".Land").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Pre-Emption").click(function(){
+    $(".Pre-Emption").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Resort").click(function(){
+    $(".Resort").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Warehouse").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Warehouse").click(function(){
+    $(".Warehouse").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Dormitory").hide();
+    $(".Office").hide();
+  });
+  $("#Dormitory").click(function(){
+    $(".Dormitory").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Warehouse").hide();
+    $(".Office").hide();
+  });
+  $("#Office").click(function(){
+    $(".Office").show("slow");
+    $(".House").hide();
+    $(".Commercial-Building").hide();
+    $(".Apartment").hide();
+    $(".Condo").hide();
+    $(".Down").hide();
+    $(".Hotel").hide();
+    $(".Land").hide();
+    $(".Pre-Emption").hide();
+    $(".Resort").hide();
+    $(".Dormitory").hide();
+    $(".Warehouse").hide();
+  });
+
     });
 
-    $("#Apartment").click(function(){
-        $(".Apartment").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Commercial-Building").click(function(){
-        $(".Commercial-Building").show("slow");
-        $(".House").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Condo").click(function(){
-        $(".Condo").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Down").click(function(){
-        $(".Down").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Hotel").click(function(){
-        $(".Hotel").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Land").click(function(){
-        $(".Land").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Pre-Emption").click(function(){
-        $(".Pre-Emption").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Resort").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Resort").click(function(){
-        $(".Resort").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Warehouse").hide();
-    });
-    $("#Warehouse").click(function(){
-        $(".Warehouse").show("slow");
-        $(".House").hide();
-        $(".Commercial-Building").hide();
-        $(".Apartment").hide();
-        $(".Condo").hide();
-        $(".Down").hide();
-        $(".Hotel").hide();
-        $(".Land").hide();
-        $(".Pre-Emption").hide();
-        $(".Resort").hide();
-    });
+</script>
 
-        });
 
-    </script>
+
+
     <div class="row justify-content-center pt-0">
         <div class="col-2 d-none d-lg-block"></div>
         <div class="col-12 col-lg-8 col-xl-8 col-xxl-8 text-center my-0">
@@ -190,6 +242,8 @@
                     <button class="btn button_list mt-4 shadow" type="button" id="Pre-Emption">Pre-Emption</button>
                     <button class="btn button_list mt-4 shadow" type="button" id="Resort">Resort</button>
                     <button class="btn button_list mt-4 shadow" type="button" id="Warehouse">Warehouse</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Dormitory">Dormitory</button>
+                    <button class="btn button_list mt-4 shadow" type="button" id="Office">Office</button>
                 </div>
             </div>
         </div>
@@ -3048,6 +3102,597 @@
 
 
 <!-- ---------------------------------------------------------- End Warehouse ---------------------------------------------------------- -->
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="Dormitory">
+                <div class="card-header">{{ __('Add Dormitory') }}</div>
+
+                <div class="card-body">
+
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>    
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+
+                @if ($message = Session::get('fail'))
+                    <div class="alert alert-danger alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>    
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+
+                    <form action="{{ route('buyer_prop.store') }}" method="POST">
+                        @csrf
+
+                        <input type="hidden" name="property" value="หอพัก">
+
+                        <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
+
+                        <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="ขาย"> ขาย
+                                    <input type="checkbox" name="sell_type" value="เช่า"> เช่า
+                                    <input type="checkbox" name="sell_type" value="ขายเซ้ง"> ขายเซ้ง
+
+                                </div>
+                        </div>
+
+                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
+
+                        <div class="form-group row">
+                            <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทอสังหาริมทรัพย์') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="property_type" value="หอพักขนาดเล็ก"> หอพักขนาดเล็ก <br>
+                                <input type="checkbox" name="property_type" value="หอพักขนาดกลาง"> หอพักขนาดกลาง <br>
+                                <input type="checkbox" name="property_type" value="หอพักขนาดใหญ่"> หอพักขนาดใหญ่
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="project_name" class="col-md-4 col-form-label text-md-right">{{ __('ชื่อโครงการ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
+
+                            </div>
+                        </div>
+
+                
+                        <div class="form-group row">
+                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภท') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="type" value="มือ 1"> มือ 1
+                                <input type="checkbox" name="type" value="มือ 2"> มือ 2
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="floor_num" class="col-md-4 col-form-label text-md-right">{{ __('ชั้นที่ต้องการ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="bedroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนอน') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="bathroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องน้ำ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="kitchen_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องครัว') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="parking_num" class="col-md-4 col-form-label text-md-right">{{ __('ที่จอดรถ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="livingroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนั่งเล่น') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="furniture" class="col-md-4 col-form-label text-md-right">{{ __('เฟอร์นิเจอร์') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="usable_area_min" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(ต่ำสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="usable_area_max" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(สูงสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="area_min" class="col-md-4 col-form-label text-md-right">{{ __('เนื้อที่(ต่ำสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="area_max" class="col-md-4 col-form-label text-md-right">{{ __('เนื้อที่(สูงสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
+
+                            </div>
+                        </div>
+
+                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
+                        <br><br><br>
+                        <div class="form-group row">
+                            <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="road" class="col-md-4 col-form-label text-md-right">{{ __('ถนน') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="road" type="text" class="form-control" name="road" placeholder="Road">
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
+
+                            <!-- select form -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
+                            </div>
+                        </div>
+                        {{csrf_field()}}
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
+
+                            <div class="col-md-6">
+                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+
+                            </div>
+                        </div>
+
+                        <label for="price" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ราคา') }}</label>
+
+                        <div class="form-group row">
+                            <label for="price_range_min" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(ต่ำสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
+
+                            </div>
+                        </div>  
+
+                        <div class="form-group row">
+                            <label for="price_range_max" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(สูงสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
+
+                            </div>
+                        </div>
+
+                        <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
+                        <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Submit') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ---------------------------------------------------------- End Dormitory ---------------------------------------------------------- -->
+
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="Office">
+                <div class="card-header">{{ __('Add Office') }}</div>
+
+                <div class="card-body">
+
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>    
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+
+                @if ($message = Session::get('fail'))
+                    <div class="alert alert-danger alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>    
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+
+                    <form action="{{ route('buyer_prop.store') }}" method="POST">
+                        @csrf
+
+                        <input type="hidden" name="property" value="ออฟฟิศ">
+
+                        <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="buyer_with_machi" value="-">
+
+                        <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ประกาศ') }}</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="sell_type" value="หาซื้อ"> หาซื้อ
+                                    <input type="checkbox" name="sell_type" value="หาเช่า"> หาเช่า
+
+                                </div>
+                        </div>
+
+                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
+
+                        <div class="form-group row">
+                            <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทออฟฟิศ / สำนักงาน') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="property_type" value="บ้านเดี่ยว"> บ้านเดี่ยว <br>
+                                <input type="checkbox" name="property_type" value="บ้านแฝด"> บ้านแฝด <br>
+                                <input type="checkbox" name="property_type" value="ทาวน์เฮ้าส์ / ทาวน์โฮม"> ทาวน์เฮ้าส์ / ทาวน์โฮม <br>
+                                <input type="checkbox" name="property_type" value="อาคารพาณิชย์"> อาคารพาณิชย์ <br>
+                                <input type="checkbox" name="property_type" value="พื้นที่สำนักงานให้เช่า"> พื้นที่สำนักงานให้เช่า
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="project_name" class="col-md-4 col-form-label text-md-right">{{ __('ชื่อโครงการ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="project_name" type="text" class="form-control" name="project_name" placeholder="Project Name">
+
+                            </div>
+                        </div>
+
+                
+                        <div class="form-group row">
+                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภท') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="type" value="มือ 1"> มือ 1
+                                <input type="checkbox" name="type" value="มือ 2"> มือ 2
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="floor_num" class="col-md-4 col-form-label text-md-right">{{ __('ชั้น') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="floor_num" type="number" class="form-control" name="floor_num" placeholder="Floor Number" min="1">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="bedroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนอน') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="bedroom_num" type="number" class="form-control" name="bedroom_num" placeholder="Bedroom Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="bathroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องน้ำ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="bathroom_num" type="number" class="form-control" name="bathroom_num" placeholder="Bathroom Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="kitchen_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องครัว') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="kitchen_num" type="number" class="form-control" name="kitchen_num" placeholder="Kitchen Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="parking_num" class="col-md-4 col-form-label text-md-right">{{ __('ที่จอดรถ') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="parking_num" type="number" class="form-control" name="parking_num" placeholder="Parking Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="livingroom_num" class="col-md-4 col-form-label text-md-right">{{ __('ห้องนั่งเล่น') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="livingroom_num" type="number" class="form-control" name="livingroom_num" placeholder="Livingroom Number" min="0">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="furniture" class="col-md-4 col-form-label text-md-right">{{ __('เฟอร์นิเจอร์') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="furniture" type="text" class="form-control" name="furniture" placeholder="Furniture">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="usable_area_min" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(ต่ำสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usable_area_min" type="text" class="form-control" name="usable_area_min" placeholder="Usable Area Min" >
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="usable_area_max" class="col-md-4 col-form-label text-md-right">{{ __('พื้นที่ใช้สอย(สูงสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usable_area_max" type="text" class="form-control" name="usable_area_max" placeholder="Usable Area Max">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="area_min" class="col-md-4 col-form-label text-md-right">{{ __('เนื้อที่(ต่ำสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="area_min" type="text" class="form-control" name="area_min" placeholder="Area Min">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="area_max" class="col-md-4 col-form-label text-md-right">{{ __('เนื้อที่(สูงสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="area_max" type="text" class="form-control" name="area_max" placeholder="Area Max">
+
+                            </div>
+                        </div>
+
+                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ทำเลที่ตั้ง') }}</label>
+                        <br><br><br>
+                        <div class="form-group row">
+                            <label for="alley" class="col-md-4 col-form-label text-md-right">{{ __('ซอย') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="alley" type="text" class="form-control" name="alley" placeholder="Alley">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="road" class="col-md-4 col-form-label text-md-right">{{ __('ถนน') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="road" type="text" class="form-control" name="road" placeholder="Road">
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
+
+                            <!-- select form -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="province" name="province" id="province">
+                                    <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
+                                    @foreach($list as $row)
+                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="amphures" name="amphure">
+                                    <option value="">เลือกข้อมูลอำเภอของท่าน</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="districts" name="district">
+                                    <option value="">เลือกข้อมูลตำบลของท่าน</option>
+                                </select>
+                            </div>
+                        </div>
+                        {{csrf_field()}}
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
+
+                            <div class="col-md-6">
+                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+
+                            </div>
+                        </div>
+
+                        <label for="price" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ราคา') }}</label>
+
+                        <div class="form-group row">
+                            <label for="price_range_min" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(ต่ำสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_range_min" type="text" class="form-control" name="price_range_min" placeholder="Price Range Min">
+
+                            </div>
+                        </div>  
+
+                        <div class="form-group row">
+                            <label for="price_range_max" class="col-md-4 col-form-label text-md-right">{{ __('ช่วงราคาที่ต้องการ(สูงสุด)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_range_max" type="text" class="form-control" name="price_range_max" placeholder="Price Range Max">
+
+                            </div>
+                        </div>
+
+                        <p><span style="color: red;">*</span>คำแนะนำในการค้นหาอสังหาริมทรัพย์ที่ท่านต้องการ</p>
+                        <p>ยิ่งละเอียดยิ่งดีต่อการค้นหา ประหยัดเวลาและได้อสังหาฯที่ตรงใจคุณ กรุณากรอกข้อมูลให้ครบถ้วนสมบูรณ์ เพื่อให้ระบบค้นหาได้ง่ายขึ้น</p>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Submit') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- ---------------------------------------------------------- End Office ---------------------------------------------------------- -->
+
 
 
 <script type="text/javascript">
