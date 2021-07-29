@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SellerProp;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SellerPropController extends Controller
 {
@@ -60,6 +61,45 @@ class SellerPropController extends Controller
         
     }
 
+    function bts(Request $request) {
+        $id = $request->get('select');
+        $result = array();
+        $query = DB::table('bts')
+        ->join('sub_bts', 'bts.id', '=', 'sub_bts.type')
+
+        ->select('sub_bts.name')
+        ->where('bts.name', $id)
+
+        ->groupBy('sub_bts.name')
+        ->get();
+        $output = '<option value="">เลือกสถานี</option>';
+        foreach ($query as $row) {
+            $output.='<option value="'.$row->name.'">'.$row->name.'</option>';
+        }
+        echo $output;
+        
+    }
+
+    function mrt(Request $request) {
+        $id = $request->get('select');
+        $result = array();
+        $query = DB::table('mrt')
+        ->join('sub_mrt', 'mrt.id', '=', 'sub_mrt.type')
+
+        ->select('sub_mrt.name')
+        ->where('mrt.name', $id)
+
+        ->groupBy('sub_mrt.name')
+        ->get();
+        $output = '<option value="">เลือกสถานี</option>';
+        foreach ($query as $row) {
+            $output.='<option value="'.$row->name.'">'.$row->name.'</option>';
+        }
+        echo $output;
+        
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -68,7 +108,12 @@ class SellerPropController extends Controller
     public function create()
     {
         //
-        return view('seller_prop.create');
+        $list = DB::table('provinces')->get();
+        $bts = DB::table('bts')->get();
+        $mrt = DB::table('mrt')->get();
+        return view('seller_prop.create')->with('bts', $bts)
+        ->with('list', $list)
+        ->with('mrt', $mrt);
     }
 
     /**
@@ -141,6 +186,11 @@ class SellerPropController extends Controller
             'property_video_url' => 'required',
             'agent_welcome' => 'required',
             'post_allow' => 'required'
+        ]);
+
+         $request->merge([ 
+            'nearby_place' => implode(',', (array) $request->get('nearby_place')),
+            'inside_facility' => implode(',', (array) $request->get('inside_facility'))
         ]);
 
         SellerProp::create($request->all());

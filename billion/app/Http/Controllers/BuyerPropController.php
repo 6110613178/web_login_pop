@@ -30,7 +30,7 @@ class BuyerPropController extends Controller
         ->join('amphures', 'provinces.id', '=', 'amphures.province_id')
 
         ->select('amphures.name_th')
-        ->where('provinces.id', $id) 
+        ->where('provinces.name_th', $id) 
 
         ->groupBy('amphures.name_th')
         ->get();
@@ -117,6 +117,11 @@ class BuyerPropController extends Controller
             'price_range_max' => 'required',
             'agent_welcome' => 'required'
         ]);
+
+        $request->merge([ 
+            'nearby_place' => implode(',', (array) $request->get('nearby_place'))
+        ]);
+
 
         BuyerProp::create($request->all());
 

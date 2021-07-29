@@ -31,6 +31,8 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 Route::post('provinces/fetch', [App\Http\Controllers\BuyerPropController::class, 'fetch'])->name('fetch');
 Route::post('provinces/amphures', [App\Http\Controllers\BuyerPropController::class, 'amphures'])->name('amphures');
+Route::post('bts', [App\Http\Controllers\SellerPropController::class, 'bts'])->name('bts');
+Route::post('mrt', [App\Http\Controllers\SellerPropController::class, 'mrt'])->name('mrt');
 
 Route::resource('buyer_prop', BuyerPropController::class);
 Route::resource('seller_prop', SellerPropController::class);

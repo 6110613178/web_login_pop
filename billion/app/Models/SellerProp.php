@@ -31,7 +31,7 @@ class SellerProp extends Model
         'usable_area',
         'area',
         'land_width',
-        'land_heigth',
+        'land_height',
         'holding_pattern',
         'tranfer_date_month',
         'tranfer_date_year',

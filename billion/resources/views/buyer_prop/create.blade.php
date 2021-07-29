@@ -488,7 +488,7 @@
                                     <select class="province rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="province" id="province">
                                         <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                         @foreach($list as $row)
-                                            <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                            <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                         @endforeach
                                     </select>
                                     <select class="amphures rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="district">
@@ -508,45 +508,45 @@
                                     </label>
                                     <div class="row pt-0 justify-content-center">
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="supermarket">
+                                            <input name="nearby_place[]" type="checkbox" value="supermarket">
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">Supermarket</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า">
+                                            <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า">
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">ห้างสรรพสินค้า</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="BTS"> 
+                                            <input name="nearby_place[]" type="checkbox" value="BTS"> 
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">BTS</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="MRT"> 
+                                            <input name="nearby_place[]" type="checkbox" value="MRT"> 
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">MRT</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="Airport Link">
+                                            <input name="nearby_place[]" type="checkbox" value="Airport Link">
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">Airport Link</label>
                                         </div>
                                     </div>
                                     <div class="row pt-0 justify-content-center">
                                         <div class="col-12 col-md form-check-inline justify-content-center-xs">
-                                        <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> 
+                                        <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">โรงพยาบาล</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="สนามบิน"> 
+                                            <input name="nearby_place[]" type="checkbox" value="สนามบิน"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">สนามบิน</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="ทางด่วน"> 
+                                            <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">ทางด่วน</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                        <input name="nearby_place" type="checkbox" value="โรงเรียน"> 
+                                        <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">โรงเรียน</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> 
+                                            <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">มหาวิทยาลัย</label>
                                         </div>
                                     </div>      
@@ -601,7 +601,7 @@
                                 ยินดีรับเอเจ้นท์
                             </div>
                             <div class="col text-center p-0 m-0">
-                                <button type="submit" class="col-12 btn button_list">
+                                <button type="submit" class="col-12 btn button_list" name="sub">
                                     Submit
                                 </button>
                             </div>
@@ -848,7 +848,7 @@
                                     <select class="province rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="province" id="province">
                                         <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                         @foreach($list as $row)
-                                            <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                            <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                         @endforeach
                                     </select>
                                     <select class="amphures rounded-pill col-11 col-md-5 form-check mr-3 m-0 p-0 form-select-lg mb-3" style="height:2.5rem;" name="district">
@@ -868,45 +868,45 @@
                                     </label>
                                     <div class="row pt-0 justify-content-center">
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="supermarket">
+                                            <input name="nearby_place[]" type="checkbox" value="supermarket">
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">Supermarket</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า">
+                                            <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า">
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">ห้างสรรพสินค้า</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="BTS"> 
+                                            <input name="nearby_place[]" type="checkbox" value="BTS"> 
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">BTS</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="MRT"> 
+                                            <input name="nearby_place[]" type="checkbox" value="MRT"> 
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">MRT</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="Airport Link">
+                                            <input name="nearby_place[]" type="checkbox" value="Airport Link">
                                             <label class="form-check-label ml-2 p-0 content_style" for="nearby_place">Airport Link</label>
                                         </div>
                                     </div>
                                     <div class="row pt-0 justify-content-center">
                                         <div class="col-12 col-md form-check-inline justify-content-center-xs">
-                                        <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> 
+                                        <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">โรงพยาบาล</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="สนามบิน"> 
+                                            <input name="nearby_place[]" type="checkbox" value="สนามบิน"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">สนามบิน</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="ทางด่วน"> 
+                                            <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">ทางด่วน</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                        <input name="nearby_place" type="checkbox" value="โรงเรียน"> 
+                                        <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">โรงเรียน</label>
                                         </div>
                                         <div class="col-12 col-md form-check-inline">
-                                            <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> 
+                                            <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> 
                                             <label class="form-check-label ml-2 content_style" for="nearby_place">มหาวิทยาลัย</label>
                                         </div>
                                     </div>      
@@ -961,7 +961,7 @@
                                 ยินดีรับเอเจ้นท์
                             </div>
                             <div class="col text-center p-0 m-0">
-                                <button type="submit" class="col-12 btn button_list">
+                                <button type="submit" class="col-12 btn button_list" name="sub">
                                     Submit
                                 </button>
                             </div>
@@ -1006,7 +1006,7 @@
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
                         <input type="hidden" name="business_license" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
                         <p>แบบฟอร์มตั้งซื้ออาคารพาณิชย์</p>
 
@@ -1182,17 +1182,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -1205,16 +1205,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -1251,7 +1251,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -1297,7 +1297,7 @@
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
                         <input type="hidden" name="business_license" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อคอนโด</p>
 
@@ -1473,17 +1473,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -1496,16 +1496,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -1542,7 +1542,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -1588,7 +1588,7 @@
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
                         <input type="hidden" name="business_license" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อขายดาวน์</p>
 
@@ -1765,17 +1765,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -1788,16 +1788,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place" type="checkbox[]" value="supermarket"> supermarket
+                                <input name="nearby_place" type="checkbox[]" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place" type="checkbox[]" value="BTS"> BTS
+                                <input name="nearby_place" type="checkbox[]" value="MRT"> MRT
+                                <input name="nearby_place" type="checkbox[]" value="Airport Link"> Airport Link
+                                <input name="nearby_place" type="checkbox[]" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place" type="checkbox[]" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place" type="checkbox[]" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place" type="checkbox[]" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place" type="checkbox[]" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -1834,7 +1834,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -1879,7 +1879,7 @@
 
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อโรงแรม</p>
 
@@ -2065,17 +2065,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -2088,16 +2088,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -2134,7 +2134,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -2179,7 +2179,7 @@
 
                         <input type="hidden" name="project_name" value="-">
                         <input type="hidden" name="business_license" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
                         <input type="hidden" name="type" value=0>
                         <input type="hidden" name="floor_num" value=0>
                         <input type="hidden" name="bedroom_num" value=0>
@@ -2233,10 +2233,10 @@
                                     <option value="สีน้ำเงิน">สีน้ำเงิน</option>
                                 </select>
 
-                                <input name="area_type" type="checkbox" value="ติดถนนใหญ่"> ติดถนนใหญ่
-                                <input name="area_type" type="checkbox" value="ติดถนนซอย"> ติดถนนซอย
-                                <input name="area_type" type="checkbox" value="ถนนกว้าง"> ถนนกว้าง <span><input type="text" style="width: 100px;">เมตร</span>
-                                <input name="area_type" type="checkbox" value="ถมแล้ว"> ถมแล้ว
+                                <input name="nearby_place[]" type="checkbox" value="ติดถนนใหญ่"> ติดถนนใหญ่
+                                <input name="nearby_place[]" type="checkbox" value="ติดถนนซอย"> ติดถนนซอย
+                                <input name="nearby_place[]" type="checkbox" value="ถนนกว้าง"> ถนนกว้าง <span><input type="text" style="width: 100px;">เมตร</span>
+                                <input name="nearby_place[]" type="checkbox" value="ถมแล้ว"> ถมแล้ว
                         
                             </div>
                         </div>
@@ -2291,17 +2291,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -2314,16 +2314,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -2360,7 +2360,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -2407,7 +2407,8 @@
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
                         <input type="hidden" name="business_license" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
+
 
                         <p>แบบฟอร์มตั้งซื้อใบจอง</p>
 
@@ -2574,17 +2575,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -2597,16 +2598,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -2643,7 +2644,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -2688,7 +2689,7 @@
 
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
 
@@ -2873,17 +2874,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -2896,16 +2897,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -2942,7 +2943,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -3099,17 +3100,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -3122,12 +3123,12 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="ถนนใหญ่"> ถนนใหญ่
-                                <input name="nearby_place" type="checkbox" value="ถนนซอย"> ถนนซอย
-                                <input name="nearby_place" type="checkbox" value="ขนส่ง"> ขนส่ง
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="ถนนใหญ่"> ถนนใหญ่
+                                <input name="nearby_place[]" type="checkbox" value="ถนนซอย"> ถนนซอย
+                                <input name="nearby_place[]" type="checkbox" value="ขนส่ง"> ขนส่ง
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
 
                             </div>
                         </div>
@@ -3164,7 +3165,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -3387,17 +3388,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -3410,16 +3411,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -3456,7 +3457,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -3504,7 +3505,7 @@
 
                         <input type="hidden" name="city_plan_color" value="-">
                         <input type="hidden" name="area_type" value="-">
-                        <input type="hidden" name="buyer_with_machi" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
 
                         <p>แบบฟอร์มตั้งซื้อรีสอร์ท</p>
 
@@ -3683,17 +3684,17 @@
                                 <select class="province" name="province" id="province">
                                     <option value="">เลือกข้อมูลจังหวัดของท่าน</option>
                                     @foreach($list as $row)
-                                        <option value="{{$row->id}}">{{$row->name_th}}</option>
+                                        <option value="{{$row->name_th}}">{{$row->name_th}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="amphures" name="amphure">
+                                <select class="amphures" name="district">
                                     <option value="">เลือกข้อมูลอำเภอของท่าน</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="districts" name="district">
+                                <select class="districts" name="sub_district">
                                     <option value="">เลือกข้อมูลตำบลของท่าน</option>
                                 </select>
                             </div>
@@ -3706,16 +3707,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
 
                             </div>
                         </div>
@@ -3748,7 +3749,7 @@
                                 <input name="agent_welcome" type="checkbox" value="ใช่"> ยินดีรับเอเจ้นท์
                             </div>
                             <div class="col-md-6 offset-md-4 m-0">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" name="sub">
                                     {{ __('Submit') }}
                                 </button>
                             </div>
@@ -3801,6 +3802,31 @@
     });
 
     </script>
+
+    
+<?php  
+    if(isset($_POST['sub']))  {  
+        $host="localhost";//host name  
+        $username="root"; //database username  
+        $word="";//database word  
+        $db_name="multi_auth10";//database name  
+        $tbl_name="buyer_props"; //table name  
+        $con=mysqli_connect("$host", "$username", "$word","$db_name")or die("cannot connect");//connection string  
+        $checkbox1=$_POST['nearby_place'];  
+        $chk="";  
+        foreach($checkbox1 as $chk1)  {  
+            $chk .= $chk1.",";  
+        }  
+        $in_ch=mysqli_query($con,"insert into buyer_props(nearby_place) values ('$chk')");  
+        if($in_ch==1)  {  
+            echo'<script>alert("Inserted Successfully")</script>';  
+        }  
+        else  {  
+            echo'<script>alert("Failed To Insert")</script>';  
+        }  
+    }  
+?>  
+
 
 
 @endsection

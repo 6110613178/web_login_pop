@@ -242,6 +242,7 @@
                         <input type="hidden" name="land_height" value="0">
                         <input type="hidden" name="sell_with_machine" value="-">
                         <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="floor_plan_picture" value="-">
 
                         <!-- ประกาศ -->
 
@@ -259,6 +260,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror -->
+
                             </div>
                         </div>
 
@@ -422,7 +424,7 @@
 
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_date" type="number" class="form-control" name="transfer_date_month" placeholder="Month" min="1" max="12"> -->
-                                <select class="form-control" name="transfer_date_month" id="transfer_date_month">
+                                <select class="form-control" name="tranfer_date_month" id="tranfer_date_month">
                                     <option value="">เดือน</option>
                                     <option value="มกราคม">มกราคม</option>
                                     <option value="กุมภาพันธ์">กุมภาพันธ์</option>
@@ -438,7 +440,7 @@
                                     <option value="ธันวาคม">ธันวาคม</option>                               
                                 </select>                          
                             </div>
-                                <input id="tranfer_date" type="number" class="form-control" name="date_" placeholder="Year" min="1000" max="3000">
+                                <input id="tranfer_date_year" type="number" class="form-control" name="tranfer_date_year" placeholder="Year" min="1000" max="3000">
                         </div>
                         
 
@@ -529,17 +531,17 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย,
-                                อื่นๆ <input name="nearby_place" type="text"> 
+                                <input name="nearby_place[]" type="checkbox" value="supermarket"> supermarket
+                                <input name="nearby_place[]" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
+                                <input name="nearby_place[]" type="checkbox" value="BTS"> BTS
+                                <input name="nearby_place[]" type="checkbox" value="MRT"> MRT
+                                <input name="nearby_place[]" type="checkbox" value="Airport Link"> Airport Link
+                                <input name="nearby_place[]" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
+                                <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
+                                <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
+                                <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย,
+                                อื่นๆ <input name="nearby_place[]" type="text"> 
 
                             </div>
                         </div>
@@ -554,12 +556,12 @@
                                 <select class="bts" name="bts" id="bts">
                                     <option value="">เลือกสาย</option>
                                     @foreach($bts as $row)
-                                        <option value="{{$row->id}}">{{$row->name}}</option>
+                                        <option value="{{$row->name}}">{{$row->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="sub_bts" name="sub_bts" id="sub_bts">
+                                <select class="sub_bts" name="nearby_bts" id="sub_bts">
                                     <option value="">เลือกสถานี</option>
                                 </select>
                             </div>
@@ -573,7 +575,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <select class="mrt" name="mrt" id="mrt">
+                                <select class="nearby_airport_link" name="nearby_airport_link" id="nearby_airport_link">
                                     <option value="">เลือกสาย</option>
                                     <option value="พญาไท">พญาไท</option>
                                     <option value="ราชปรารภ">ราชปรารภ</option>
@@ -602,7 +604,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="sub_bts" name="sub_bts" id="sub_bts">
+                                <select class="sub_mrt" name="nearby_mrt" id="sub_mrt">
                                     <option value="">เลือกสถานี</option>
                                 </select>
                             </div>
@@ -620,33 +622,33 @@
                             <label for="inside_facility" class="col-md-4 col-form-label text-md-right">{{ __('สิ่งอำนวยความสะดวกภายในที่พัก') }}</label>
 
                             <div class="col-md-6">
-                                <input name="inside_facility" type="checkbox" value="เครื่องปรับอากาศ"> เครื่องปรับอากาศ
-                                <input name="inside_facility" type="checkbox" value="พัดลม"> พัดลม
-                                <input name="inside_facility" type="checkbox" value="เครื่องฟอกอากาศ/กรองอากาศ"> เครื่องฟอกอากาศ/กรองอากาศ
-                                <input name="inside_facility" type="checkbox" value="เครื่องทำน้ำอุ่น"> เครื่องทำน้ำอุ่น
-                                <input name="inside_facility" type="checkbox" value="ห้องครัว"> ห้องครัว
-                                <input name="inside_facility" type="checkbox" value="wifi"> wifi
-                                <input name="inside_facility" type="checkbox" value="เคเบิลทีวี"> เคเบิลทีวี
-                                <input name="inside_facility" type="checkbox" value="จานดาวเทียม"> จานดาวเทียม
-                                <input name="inside_facility" type="checkbox" value="โทรศัพท์สายตรง"> โทรศัพท์สายตรง
-                                <input name="inside_facility" type="checkbox" value="อินเตอร์คอม"> อินเตอร์คอม
-                                <input name="inside_facility" type="checkbox" value="ห้องเก็บเสื้อผ้า"> ห้องเก็บเสื้อผ้า
-                                <input name="inside_facility" type="checkbox" value="สัญญาณกันขโมย"> สัญญาณกันขโมย
-                                <input name="inside_facility" type="checkbox" value="Digital Door Lock"> Digital Door Lock
-                                <input name="inside_facility" type="checkbox" value="Video Door Phone"> Video Door Phone
-                                <input name="inside_facility" type="checkbox" value="โต๊ะเครื่องแป้ง"> โต๊ะเครื่องแป้ง
-                                <input name="inside_facility" type="checkbox" value="เครื่องซักผ้า"> เครื่องซักผ้า
-                                <input name="inside_facility" type="checkbox" value="เครื่องปั่นผ้าแห้ง"> เครื่องปั่นผ้าแห้ง
-                                <input name="inside_facility" type="checkbox" value="เตารีดผ้า"> เตารีดผ้า
-                                <input name="inside_facility" type="checkbox" value="โต๊ะรีดผ้า"> โต๊ะรีดผ้า
-                                <input name="inside_facility" type="checkbox" value="ตู้อาบน้ำ"> ตู้อาบน้ำ
-                                <input name="inside_facility" type="checkbox" value="อ่างอาบน้ำ"> อ่างอาบน้ำ
-                                <input name="inside_facility" type="checkbox" value="จากุชชี่"> จากุชชี่
-                                <input name="inside_facility" type="checkbox" value="ห้องอาบน้ำฝักบัว"> ห้องอาบน้ำฝักบัว
-                                <input name="inside_facility" type="checkbox" value="โรงจอดรถ"> โรงจอดรถ
-                                <input name="inside_facility" type="checkbox" value="กล้อง CCTV"> กล้อง CCTV
-                                <input name="inside_facility" type="checkbox" value="เครื่องดูดฝุ่น"> เครื่องดูดฝุ่น
-                                <input name="inside_facility" type="checkbox" value="ตู้เซฟนิรภัย"> ตู้เซฟนิรภัย
+                                <input name="inside_facility[]" type="checkbox" value="เครื่องปรับอากาศ"> เครื่องปรับอากาศ
+                                <input name="inside_facility[]" type="checkbox" value="พัดลม"> พัดลม
+                                <input name="inside_facility[]" type="checkbox" value="เครื่องฟอกอากาศ/กรองอากาศ"> เครื่องฟอกอากาศ/กรองอากาศ
+                                <input name="inside_facility[]" type="checkbox" value="เครื่องทำน้ำอุ่น"> เครื่องทำน้ำอุ่น
+                                <input name="inside_facility[]" type="checkbox" value="ห้องครัว"> ห้องครัว
+                                <input name="inside_facility[]" type="checkbox" value="wifi"> wifi
+                                <input name="inside_facility[]" type="checkbox" value="เคเบิลทีวี"> เคเบิลทีวี
+                                <input name="inside_facility[]" type="checkbox" value="จานดาวเทียม"> จานดาวเทียม
+                                <input name="inside_facility[]" type="checkbox" value="โทรศัพท์สายตรง"> โทรศัพท์สายตรง
+                                <input name="inside_facility[]" type="checkbox" value="อินเตอร์คอม"> อินเตอร์คอม
+                                <input name="inside_facility[]" type="checkbox" value="ห้องเก็บเสื้อผ้า"> ห้องเก็บเสื้อผ้า
+                                <input name="inside_facility[]" type="checkbox" value="สัญญาณกันขโมย"> สัญญาณกันขโมย
+                                <input name="inside_facility[]" type="checkbox" value="Digital Door Lock"> Digital Door Lock
+                                <input name="inside_facility[]" type="checkbox" value="Video Door Phone"> Video Door Phone
+                                <input name="inside_facility[]" type="checkbox" value="โต๊ะเครื่องแป้ง"> โต๊ะเครื่องแป้ง
+                                <input name="inside_facility[]" type="checkbox" value="เครื่องซักผ้า"> เครื่องซักผ้า
+                                <input name="inside_facility[]" type="checkbox" value="เครื่องปั่นผ้าแห้ง"> เครื่องปั่นผ้าแห้ง
+                                <input name="inside_facility[]" type="checkbox" value="เตารีดผ้า"> เตารีดผ้า
+                                <input name="inside_facility[]" type="checkbox" value="โต๊ะรีดผ้า"> โต๊ะรีดผ้า
+                                <input name="inside_facility[]" type="checkbox" value="ตู้อาบน้ำ"> ตู้อาบน้ำ
+                                <input name="inside_facility[]" type="checkbox" value="อ่างอาบน้ำ"> อ่างอาบน้ำ
+                                <input name="inside_facility[]" type="checkbox" value="จากุชชี่"> จากุชชี่
+                                <input name="inside_facility[]" type="checkbox" value="ห้องอาบน้ำฝักบัว"> ห้องอาบน้ำฝักบัว
+                                <input name="inside_facility[]" type="checkbox" value="โรงจอดรถ"> โรงจอดรถ
+                                <input name="inside_facility[]" type="checkbox" value="กล้อง CCTV"> กล้อง CCTV
+                                <input name="inside_facility[]" type="checkbox" value="เครื่องดูดฝุ่น"> เครื่องดูดฝุ่น
+                                <input name="inside_facility[]" type="checkbox" value="ตู้เซฟนิรภัย"> ตู้เซฟนิรภัย
                               
 
                             </div>
@@ -9503,7 +9505,7 @@
                 method:"POST",
                 data:{select:select,_token:_token},
                 success:function(result) {
-                    $('.sub_bts').html(result);
+                    $('.sub_mrt').html(result);
                 }
             })
             console.log(select);
@@ -9525,8 +9527,56 @@
         }
     }
 
-
     </script>
+
+<?php  
+    if(isset($_POST['sub']))  {  
+        $host="localhost";//host name  
+        $username="root"; //database username  
+        $word="";//database word  
+        $db_name="multi_auth10";//database name  
+        $tbl_name="seller_props"; //table name  
+        $con=mysqli_connect("$host", "$username", "$word","$db_name")or die("cannot connect");//connection string  
+        $checkbox1=$_POST['nearby_place'];  
+        $chk="";  
+        foreach($checkbox1 as $chk1)  {  
+            $chk .= $chk1.",";  
+        }  
+        $in_ch=mysqli_query($con,"insert into buyer_props(nearby_place) values ('$chk')");  
+        if($in_ch==1)  {  
+            echo'<script>alert("Inserted Successfully")</script>';  
+        }  
+        else  {  
+            echo'<script>alert("Failed To Insert")</script>';  
+        }  
+    }  
+?>  
+
+
+<?php  
+    if(isset($_POST['sub']))  {  
+        $host="localhost";//host name  
+        $username="root"; //database username  
+        $word="";//database word  
+        $db_name="multi_auth10";//database name  
+        $tbl_name="seller_props"; //table name  
+        $con=mysqli_connect("$host", "$username", "$word","$db_name")or die("cannot connect");//connection string  
+        $checkbox1=$_POST['inside_facility'];  
+        $chk="";  
+        foreach($checkbox1 as $chk1)  {  
+            $chk .= $chk1.",";  
+        }  
+        $in_ch=mysqli_query($con,"insert into seller_props(inside_facility) values ('$chk')");  
+        if($in_ch==1)  {  
+            echo'<script>alert("Inserted Successfully")</script>';  
+        }  
+        else  {  
+            echo'<script>alert("Failed To Insert")</script>';  
+        }  
+    }  
+?>  
+
+
 
 
 @endsection
