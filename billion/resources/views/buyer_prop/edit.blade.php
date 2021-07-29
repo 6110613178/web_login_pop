@@ -31,9 +31,9 @@
                             <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทอสังหาริมทรัพย์') }}</label>
 
                             <div class="col-md-6">
-                                <input type="checkbox" name="property_type" value="บ้านเดี่ยว"> บ้านเดี่ยว  
-                                <input type="checkbox" name="property_type" value="บ้านแฝด"> บ้านแฝด  
-                                <input type="checkbox" name="property_type" value="ทาวน์เฮาส์/ทาวน์โฮม"> ทาวน์เฮาส์/ทาวน์โฮม
+                                <input type="checkbox" name="property_type" value="บ้านเดี่ยว" <?php if ($buyerProp->property_type=="บ้านเดี่ยว") echo "checked";?>> บ้านเดี่ยว  
+                                <input type="checkbox" name="property_type" value="บ้านแฝด" <?php if ($buyerProp->property_type=="บ้านแฝด") echo "checked";?>> บ้านแฝด  
+                                <input type="checkbox" name="property_type" value="ทาวน์เฮาส์/ทาวน์โฮม" <?php if ($buyerProp->property_type=="ทาวน์เฮาส์/ทาวน์โฮม") echo "checked";?>> ทาวน์เฮาส์/ทาวน์โฮม
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -61,8 +61,8 @@
                             <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภท') }}</label>
 
                             <div class="col-md-6">
-                                <input type="checkbox" name="type" value="มือ 1"> มือ 1
-                                <input type="checkbox" name="type" value="มือ 2"> มือ 2
+                                <input type="checkbox" name="type" value="มือ 1" <?php if ($buyerProp->type=="มือ 1") echo "checked";?>> มือ 1
+                                <input type="checkbox" name="type" value="มือ 2" <?php if ($buyerProp->type=="มือ 2") echo "checked";?>> มือ 2
                                 
 
                                 <!-- @error('name')
@@ -303,16 +303,16 @@
                             <label for="nearby_place" class="col-md-4 col-form-label text-md-right">{{ __('สถานที่ใกล้เคียง') }}</label>
 
                             <div class="col-md-6">
-                                <input name="nearby_place" type="checkbox" value="supermarket"> supermarket
-                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า"> ห้างสรรพสินค้า
-                                <input name="nearby_place" type="checkbox" value="BTS"> BTS
-                                <input name="nearby_place" type="checkbox" value="MRT"> MRT
-                                <input name="nearby_place" type="checkbox" value="Airport Link"> Airport Link
-                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล"> โรงพยาบาล
-                                <input name="nearby_place" type="checkbox" value="สนามบิน"> สนามบิน
-                                <input name="nearby_place" type="checkbox" value="ทางด่วน"> ทางด่วน
-                                <input name="nearby_place" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <input name="nearby_place" type="checkbox" value="supermarket" <?php if ($buyerProp->nearby_place=="supermarket") echo "checked";?>> supermarket
+                                <input name="nearby_place" type="checkbox" value="ห้างสรรพสินค้า" <?php if ($buyerProp->nearby_place=="ห้างสรรพสินค้า") echo "checked";?>> ห้างสรรพสินค้า
+                                <input name="nearby_place" type="checkbox" value="BTS" <?php if ($buyerProp->nearby_place=="BTS") echo "checked";?>> BTS
+                                <input name="nearby_place" type="checkbox" value="MRT" <?php if ($buyerProp->nearby_place=="MRT") echo "checked";?>> MRT
+                                <input name="nearby_place" type="checkbox" value="Airport Link" <?php if ($buyerProp->nearby_place=="Airport Link") echo "checked";?>> Airport Link
+                                <input name="nearby_place" type="checkbox" value="โรงพยาบาล" <?php if ($buyerProp->nearby_place=="โรงพยาบาล") echo "checked";?>> โรงพยาบาล
+                                <input name="nearby_place" type="checkbox" value="สนามบิน" <?php if ($buyerProp->nearby_place=="สนามบิน") echo "checked";?>> สนามบิน
+                                <input name="nearby_place" type="checkbox" value="ทางด่วน" <?php if ($buyerProp->nearby_place=="ทางด่วน") echo "checked";?>> ทางด่วน
+                                <input name="nearby_place" type="checkbox" value="โรงเรียน" <?php if ($buyerProp->nearby_place=="โรงเรียน") echo "checked";?>> โรงเรียน
+                                <input name="nearby_place" type="checkbox" value="มหาวิทยาลัย" <?php if ($buyerProp->nearby_place=="มหาวิทยาลัย") echo "checked";?>> มหาวิทยาลัย
 
                                 <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">

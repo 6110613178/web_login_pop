@@ -698,21 +698,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="special_properties" class="col-md-4 col-form-label text-md-right">{{ __('คุณสมบัติพิเศษ') }}</label>
-
-                            <div class="col-md-6">
-                                <input name="special_properties" type="checkbox" value="เพนท์เฮ้าส์"> เพนท์เฮ้าส์
-                                <input name="special_properties" type="checkbox" value="สระว่ายน้ำส่วนตัว"> สระว่ายน้ำส่วนตัว
-                                <input name="special_properties" type="checkbox" value="ห้องมุม"> ห้องมุม
-                                <input name="special_properties" type="checkbox" value="วิวทะเล"> วิวทะเล
-                                <input name="special_properties" type="checkbox" value="วิวเมือง"> วิวเมือง
-                                <input name="special_properties" type="checkbox" value="วิวสวนธรรมชาติ"> วิวสวนธรรมชาติ
-                                <input name="special_properties" type="checkbox" value="มีชั้นใต้ดิน"> มีชั้นใต้ดิน
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="central_facility" class="col-md-4 col-form-label text-md-right">{{ __('สิ่งอำนวยความสะดวกส่วนกลาง') }}</label>
 
                             <div class="col-md-6">
@@ -919,7 +904,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    <option value="ผู้รับผิดชอบค่าโอน">ผู้รับผิดชอบค่าโอน</option>
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -1496,21 +1481,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="special_properties" class="col-md-4 col-form-label text-md-right">{{ __('คุณสมบัติพิเศษ') }}</label>
-
-                            <div class="col-md-6">
-                                <input name="special_properties" type="checkbox" value="เพนท์เฮ้าส์"> เพนท์เฮ้าส์
-                                <input name="special_properties" type="checkbox" value="สระว่ายน้ำส่วนตัว"> สระว่ายน้ำส่วนตัว
-                                <input name="special_properties" type="checkbox" value="ห้องมุม"> ห้องมุม
-                                <input name="special_properties" type="checkbox" value="วิวทะเล"> วิวทะเล
-                                <input name="special_properties" type="checkbox" value="วิวเมือง"> วิวเมือง
-                                <input name="special_properties" type="checkbox" value="วิวสวนธรรมชาติ"> วิวสวนธรรมชาติ
-                                <input name="special_properties" type="checkbox" value="มีชั้นใต้ดิน"> มีชั้นใต้ดิน
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="central_facility" class="col-md-4 col-form-label text-md-right">{{ __('สิ่งอำนวยความสะดวกส่วนกลาง') }}</label>
 
                             <div class="col-md-6">
@@ -1717,7 +1687,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -2135,21 +2105,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="special_properties" class="col-md-4 col-form-label text-md-right">{{ __('คุณสมบัติพิเศษ') }}</label>
-
-                            <div class="col-md-6">
-                                <input name="special_properties" type="checkbox" value="เพนท์เฮ้าส์"> เพนท์เฮ้าส์
-                                <input name="special_properties" type="checkbox" value="สระว่ายน้ำส่วนตัว"> สระว่ายน้ำส่วนตัว
-                                <input name="special_properties" type="checkbox" value="ห้องมุม"> ห้องมุม
-                                <input name="special_properties" type="checkbox" value="วิวทะเล"> วิวทะเล
-                                <input name="special_properties" type="checkbox" value="วิวเมือง"> วิวเมือง
-                                <input name="special_properties" type="checkbox" value="วิวสวนธรรมชาติ"> วิวสวนธรรมชาติ
-                                <input name="special_properties" type="checkbox" value="มีชั้นใต้ดิน"> มีชั้นใต้ดิน
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="central_facility" class="col-md-4 col-form-label text-md-right">{{ __('สิ่งอำนวยความสะดวกส่วนกลาง') }}</label>
 
                             <div class="col-md-6">
@@ -2352,7 +2307,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -2926,21 +2881,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="special_properties" class="col-md-4 col-form-label text-md-right">{{ __('คุณสมบัติพิเศษ') }}</label>
-
-                            <div class="col-md-6">
-                                <input name="special_properties" type="checkbox" value="เพนท์เฮ้าส์"> เพนท์เฮ้าส์
-                                <input name="special_properties" type="checkbox" value="สระว่ายน้ำส่วนตัว"> สระว่ายน้ำส่วนตัว
-                                <input name="special_properties" type="checkbox" value="ห้องมุม"> ห้องมุม
-                                <input name="special_properties" type="checkbox" value="วิวทะเล"> วิวทะเล
-                                <input name="special_properties" type="checkbox" value="วิวเมือง"> วิวเมือง
-                                <input name="special_properties" type="checkbox" value="วิวสวนธรรมชาติ"> วิวสวนธรรมชาติ
-                                <input name="special_properties" type="checkbox" value="มีชั้นใต้ดิน"> มีชั้นใต้ดิน
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="central_facility" class="col-md-4 col-form-label text-md-right">{{ __('สิ่งอำนวยความสะดวกส่วนกลาง') }}</label>
 
                             <div class="col-md-6">
@@ -3147,7 +3087,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -3746,21 +3686,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="special_properties" class="col-md-4 col-form-label text-md-right">{{ __('คุณสมบัติพิเศษ') }}</label>
-
-                            <div class="col-md-6">
-                                <input name="special_properties" type="checkbox" value="เพนท์เฮ้าส์"> เพนท์เฮ้าส์
-                                <input name="special_properties" type="checkbox" value="สระว่ายน้ำส่วนตัว"> สระว่ายน้ำส่วนตัว
-                                <input name="special_properties" type="checkbox" value="ห้องมุม"> ห้องมุม
-                                <input name="special_properties" type="checkbox" value="วิวทะเล"> วิวทะเล
-                                <input name="special_properties" type="checkbox" value="วิวเมือง"> วิวเมือง
-                                <input name="special_properties" type="checkbox" value="วิวสวนธรรมชาติ"> วิวสวนธรรมชาติ
-                                <input name="special_properties" type="checkbox" value="มีชั้นใต้ดิน"> มีชั้นใต้ดิน
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="central_facility" class="col-md-4 col-form-label text-md-right">{{ __('สิ่งอำนวยความสะดวกส่วนกลาง') }}</label>
 
                             <div class="col-md-6">
@@ -3967,7 +3892,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -4722,7 +4647,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -5479,7 +5404,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -6283,7 +6208,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -7043,7 +6968,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -7813,7 +7738,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -8615,7 +8540,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>
@@ -9421,7 +9346,7 @@
                             <div class="col-md-6">
                                 <!-- <input id="tranfer_fee_person_responsible" type="text" class="form-control" name="tranfer_fee_person_responsible" placeholder="Tranfer Fee Person Responsible"> -->                           
                                 <select class="form-control" name="tranfer_fee_person_responsible" id="tranfer_fee_person_responsible">
-                                    <option value="">ผู้รับผิดชอบค่าโอน</option>
+                                    ผู้รับผิดชอบค่าโอน
                                     <option value="ผู้ขาย">ผู้ขาย</option>
                                     <option value="ผู้ซื้อ">ผู้ซื้อ</option>
                                     <option value="ออกคนละครึ่ง">ออกคนละครึ่ง</option>

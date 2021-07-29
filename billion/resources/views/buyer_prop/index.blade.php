@@ -39,7 +39,8 @@
 
                         @foreach ($data as $key => $value)
                             <tr>
-                                <td>{{ ++$i }}</td>
+                                <!-- <td>{{ ++$i }}</td> -->
+                                <td>{{ $value->id }}</td>
                                 <td>{{ $value->property_type }}</td>
                                 <td>{{ $value->project_name }}</td>
                                 <td>
