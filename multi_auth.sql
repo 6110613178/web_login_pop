@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2021 at 09:43 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Jul 29, 2021 at 11:45 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `multi_auth`
+-- Database: `multi_auth10`
 --
 
 -- --------------------------------------------------------
@@ -1098,6 +1098,17 @@ CREATE TABLE `buyer_props` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buyer_props`
+--
+
+INSERT INTO `buyer_props` (`id`, `property`, `sell_type`, `property_type`, `project_name`, `city_plan_color`, `area_type`, `business_license`, `buy_with_machine`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `agent_welcome`, `created_at`, `updated_at`) VALUES
+(1, 'บ้าน', 'ขายเซ้ง', 'ทาวน์เฮาส์/ทาวน์โฮม', 'House', '-', '-', '-', '-', 'มือ 2', 1, 1, 1, 1, 1, 1, 'ครบ', 100, 500, 100, 500, '56', 'ประเวศ', '*บางซื่อ', 'เขตดุสิต', 'กรุงเทพมหานคร', 'Airport Link', 500000, 5000000, 'ใช่', '2021-07-28 22:07:09', '2021-07-28 22:07:09'),
+(2, 'บ้าน', 'ขายเซ้ง', 'บ้านเดี่ยว', 'Dai', '-', '-', '-', '-', 'มือ 1', 1, 0, 0, 0, 0, 1, 'ครบ', 100, 500, 100, 200, '56', '1', 'สะพานหิน', 'นาดี', 'ปราจีนบุรี', 'Airport Link', 500000, 5000000, 'ใช่', '2021-07-28 22:09:09', '2021-07-28 22:09:09'),
+(3, 'บ้าน', 'เช่า', 'บ้านแฝด', 'Last', '-', '-', '-', '-', 'มือ 1', 1, 1, 0, 0, 1, 1, 'ครบ', 100, 500, 100, 200, '56', 'Ramindra', 'คลองต้นไทร', 'เขตคลองสาน', 'กรุงเทพมหานคร', 'Airport Link', 50, 5000000, 'ใช่', '2021-07-28 22:12:01', '2021-07-28 22:12:01'),
+(4, 'บ้าน', 'ขาย', 'บ้านเดี่ยว', '4Ence', '-', '-', '-', '-', 'มือ 1', 1, 0, 1, 1, 0, 1, 'ครบ', 50, 50, 100, 100, '56', 'Ramindra', 'สามวาตะวันตก', 'เขตคลองสามวา', 'กรุงเทพมหานคร', 'BTS,MRT,Airport Link', 500000, 5000000, 'ใช่', '2021-07-28 22:14:27', '2021-07-28 22:14:27'),
+(5, 'โรงแรม', 'เช่า', 'โรงแรมขนาดใหญ่', 'Hotel', '-', '-', '-', '-', 'มือ 1', 3, 3, 3, 3, 3, 3, 'a', 100, 200, 50, 50, '56', 'Ramindra', 'คลองต้นไทร', 'เขตคลองสาน', 'กรุงเทพมหานคร', 'สนามบิน,มหาวิทยาลัย', 50, 5000000, 'ใช่', '2021-07-28 22:38:07', '2021-07-28 22:38:07');
 
 -- --------------------------------------------------------
 
@@ -10182,78 +10193,6 @@ INSERT INTO `provinces` (`id`, `code`, `name_th`, `name_en`, `geography_id`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `seller_props`
---
-
-CREATE TABLE `seller_props` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `property` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `seller_status` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sell_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `topic_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `detail` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `city_plan_color` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `area_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sell_with_machine` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `floor_num` int(11) NOT NULL,
-  `bedroom_num` int(11) NOT NULL,
-  `bathroom_num` int(11) NOT NULL,
-  `kitchen_num` int(11) NOT NULL,
-  `parking_num` int(11) NOT NULL,
-  `livingroom_num` int(11) NOT NULL,
-  `furniture` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `usable_area` int(11) NOT NULL,
-  `area` int(11) NOT NULL,
-  `land_width` int(11) NOT NULL,
-  `land_height` int(11) NOT NULL,
-  `holding_pattern` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tranfer_date_month` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tranfer_date_year` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `property_code` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ownership_document` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `business_license` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `alley` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `road` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sub_district` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `district` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `province` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `google_map_link` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nearby_place` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nearby_bts` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nearby_airport_link` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nearby_mrt` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `inside_facility` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `furniture_thing` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `special_properties` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `central_facility` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_zone_protection_room` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_balcony` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_bedroom` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_storageroom` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_office` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_kitchen` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `add_garage` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` int(11) NOT NULL,
-  `price_per_month` int(11) NOT NULL,
-  `price_central` int(11) NOT NULL,
-  `tranfer_fee_person_responsible` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `promotion` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `property_picture` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `floor_plan_picture` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `property_video` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `property_video_url` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `agent_welcome` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_allow` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `sub_bts`
 --
 
@@ -10483,12 +10422,6 @@ ALTER TABLE `provinces`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `seller_props`
---
-ALTER TABLE `seller_props`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `sub_bts`
 --
 ALTER TABLE `sub_bts`
@@ -10521,7 +10454,7 @@ ALTER TABLE `bts`
 -- AUTO_INCREMENT for table `buyer_props`
 --
 ALTER TABLE `buyer_props`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -10552,12 +10485,6 @@ ALTER TABLE `mrt`
 --
 ALTER TABLE `provinces`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
-
---
--- AUTO_INCREMENT for table `seller_props`
---
-ALTER TABLE `seller_props`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sub_bts`
