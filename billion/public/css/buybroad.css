@@ -1,0 +1,205 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardbuyborad{
+    height: 185px;
+    left: 299px;
+    top: 99px;
+    background: #EFFFF0;
+    margin-bottom: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    .rounded-circle-user{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 194px;
+    height: 194px;
+    top: 50px;
+    border-radius: 50% !important;
+    margin-left: 20px;
+    }
+
+    .nav-buybroad{
+    font-family: 'FC iconic';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    /* identical to box height */
+    color: #000000;
+    }
+
+    .btn-outline-danger{
+      padding: 15px 25px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+  .btn-outline-danger:hover {background-color: #3b3b3b}
+
+  .btn-outline-danger:active {
+  background-color: #8e3e3e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.btn_buy {
+  color: #000000;
+  background-color: #e9e9e9;
+  border-color: #6c757d;
+  width:100px;
+  font-family: 'FC_iconic';
+  width: 100%;
+  height: 35px;
+  border: 1px solid transparent;
+}
+.btn_buy:hover {
+  color: rgb(77, 77, 77);
+  background-color: #dfdfdf;
+  border-color: #a5a5a5;
+}
+.btn_buy:focus, .btn_buy.focus {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+.btn_buy.disabled, .btn_buy:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.btn_buy:not(:disabled):not(.disabled):active, .btn_buy:not(:disabled):not(.disabled).active, .show > .btn_buy.dropdown-toggle {
+  color: #fff;
+  background-color: #35d13b;
+  border-color: #4e555b;
+}
+.btn_buy:not(:disabled):not(.disabled):active:focus, .btn_buy:not(:disabled):not(.disabled).active:focus, .show > .btn_buy.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-check:active+.btn_custom, .btn-check:checked+.btn_buy, .btn_buy.active, .btn_buy.dropdown-toggle.show, .btn_buy:active, .btn_buy:visited {
+  color: rgb(0, 0, 0);
+  background-color: #90EC93;
+  border-color: #ffffff;
+}
+
+.btn_cus
+[type=submit] {
+  color: #3490dc;
+  text-decoration: none;
+  background-color: transparent;
+}
+.btn_cus:hover {
+  color: #1d68a7;
+  text-decoration: none;
+}
+
+.btn_cus:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+.btn_cus:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'FC iconic';
+}
+.flex-container-row-description {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: left;
+  font-family: 'FC iconic';
+  border-bottom: groove;
+  margin-top: -30px;
+}
+
+.flex-item-left {
+  padding: 10px;
+  flex: 100%;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-left-description {
+  padding: 10px;
+  flex: 100%;
+}
+
+.flex-item-right-description {
+  padding: 10px;
+  flex: 50%;
+  align-self: flex-end;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container-row {
+    flex-direction: column;
+  }
+}
+
+.rect-edit:hover{
+  fill: #f1f383;
+}
+
+.rect-eye:hover{
+  fill: #83bbf3;
+}
+
+.rect-delete:hover{
+  fill: #f38383;
+}
+
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: #58464500;
+}
+
+.flex-container-row-num {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'FC iconic';
+  margin-right: 30px;
+}
+
+.flex-item-right-num {
+  flex: 50%;
+  align-self: flex-end;
+}
+
+.address{
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'FC iconic';
+  margin-left: 30px;
+}

@@ -10,37 +10,32 @@
   .btn_custom {
     color: #000000;
     background-color: #e9e9e9;
-    border-color: #6c757d;
     width:100px;
     font-family: FC_iconic;
   }
   .btn_custom:hover {
     color: rgb(77, 77, 77);
     background-color: #dfdfdf;
-    border-color: #a5a5a5;
   }
   .btn_custom:focus, .btn_custom.focus {
     color: #fff;
     background-color: #5a6268;
-    border-color: #545b62;
     box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
   }
   .btn_custom.disabled, .btn_custom:disabled {
     color: #fff;
     background-color: #6c757d;
-    border-color: #6c757d;
   }
   .btn_custom:not(:disabled):not(.disabled):active, .btn_custom:not(:disabled):not(.disabled).active, .show > .btn_custom.dropdown-toggle {
     color: #fff;
     background-color: #35d13b;
-    border-color: #4e555b;
   }
   .btn_custom:not(:disabled):not(.disabled):active:focus, .btn_custom:not(:disabled):not(.disabled).active:focus, .show > .btn_custom.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
   }
   
   .btn-check:active+.btn_custom, .btn-check:checked+.btn_custom, .btn_custom.active, .btn_custom.dropdown-toggle.show, .btn_custom:active {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     background-color: #90EC93;
     border-color: #ffffff;
   } 
@@ -53,17 +48,21 @@
   }
   
   .topic_style {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
   }
   
   .sub_style{
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 599;
   }
   
   .content_style {
-    font-size: 1.7rem;
+    font-size: 0.7rem;
     font-weight: 599;
+  }
+
+  .card_border {
+    border-radius: 1.5rem;
   }
   
   /*Add font and to HTML*/
@@ -75,4 +74,31 @@
   div {
     font-family: FC_iconic;
   }
+
+  /* 44444444444444444444444444444444444444444444444444444444444444444444444444444444 */
+  .stv-radio-buttons-wrapper {
+    clear: both;
+    display: vertical;
+  }
   
+  .btn_list_font{
+    font-size:1.3rem
+  }
+
+  .stv-radio-button {
+    position: absolute;
+    left: -9999em;
+    top: -9999em;
+  }
+  .stv-radio-button + label {
+    float: left;
+    cursor: pointer;
+    margin-right: -1px;
+    color: #686868;
+    background-color: #90EC93;
+    border-radius: 0.4em 0 0 0.4em;
+  }
+  .stv-radio-button:checked + label {
+    color: #686868;
+    background-color: #E3FCE3;
+  }
