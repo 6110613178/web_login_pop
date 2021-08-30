@@ -29,10 +29,13 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
+// Route::put('buyer_prop/{id}', [App\Http\Controllers\BuyerPropController::class, 'putmatching'])->name('buyer_prop.putmatching');
+
 Route::post('provinces/fetch', [App\Http\Controllers\BuyerPropController::class, 'fetch'])->name('fetch');
 Route::post('provinces/amphures', [App\Http\Controllers\BuyerPropController::class, 'amphures'])->name('amphures');
 Route::post('bts', [App\Http\Controllers\SellerPropController::class, 'bts'])->name('bts');
 Route::post('mrt', [App\Http\Controllers\SellerPropController::class, 'mrt'])->name('mrt');
 
 Route::resource('buyer_prop', BuyerPropController::class);
+Route::get('buyer_prop/{id}/matching', [App\Http\Controllers\BuyerPropController::class, 'matching'])->name('buyer_prop.matching');
 Route::resource('seller_prop', SellerPropController::class);

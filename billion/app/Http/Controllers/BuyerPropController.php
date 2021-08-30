@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\BuyerProp;
+use App\Models\SellerProp;
+use App\Models\MatchingBuyerProp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,6 +24,75 @@ class BuyerPropController extends Controller
                 ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    function matching($id) {
+        $data = DB::table('buyer_props')
+        ->where('id', $id)
+        ->get();
+
+        $property = $data[0]->property;
+        $sell_type = $data[0]->sell_type;
+        $property_type = $data[0]->property_type;
+        $project_name = $data[0]->project_name;
+        $city_plan_color = $data[0]->city_plan_color;
+        $area_type = $data[0]->area_type;
+        $business_license = $data[0]->business_license;
+        $buy_with_machine = $data[0]->buy_with_machine;
+        $type = $data[0]->type;
+        $floor_num = $data[0]->floor_num;
+        $bedroom_num = $data[0]->bedroom_num;
+        $bathroom_num = $data[0]->bathroom_num;
+        $kitchen_num = $data[0]->kitchen_num;
+        $parking_num = $data[0]->parking_num;
+        $livingroom_num = $data[0]->livingroom_num;
+        $furniture = $data[0]->furniture;
+        $usable_area_min = $data[0]->usable_area_min;
+        $usable_area_max = $data[0]->usable_area_max;
+        $area_min = $data[0]->area_min;
+        $area_max = $data[0]->area_max;
+        $alley = $data[0]->alley;
+        $road = $data[0]->road;
+        $sub_district = $data[0]->sub_district;
+        $district = $data[0]->district;
+        $province = $data[0]->province;
+        $nearby_place = $data[0]->nearby_place;
+        $price_range_min = $data[0]->price_range_min;
+        $price_range_max = $data[0]->price_range_max;
+        $agent_welcome = $data[0]->agent_welcome;
+
+        $data2 = DB::table('seller_props')
+        ->where([['property', $property],
+        ['sell_type', $sell_type],
+        ['property_type', $property_type],
+        ['project_name', $project_name],
+        ['city_plan_color', $city_plan_color],
+        ['area_type', $area_type],
+        ['business_license', $business_license],
+        ['sell_with_machine', $buy_with_machine],
+        ['type', $type],
+        ['floor_num', $floor_num],
+        ['bedroom_num', $bedroom_num],
+        ['bathroom_num', $bathroom_num],
+        ['kitchen_num', $kitchen_num],
+        ['parking_num', $parking_num],
+        ['livingroom_num', $livingroom_num],
+        ['furniture', $furniture],
+        ['usable_area', '>', (int)$usable_area_min-((int)$usable_area_min*0.05)],
+        ['usable_area', '<', (int)$usable_area_max+((int)$usable_area_min*0.05)],
+        ['area', '>', $area_min],
+        ['area', '<', $area_max],
+        ['alley', $alley],
+        ['road', $road],
+        ['sub_district', $sub_district],
+        ['district', $district],
+        ['province', $province],
+        ['nearby_place', $nearby_place],
+        ['price', '>', $price_range_min],
+        ['price', '<',$price_range_max],
+        ['agent_welcome', $agent_welcome]])
+        ->get();
+
+        return view('buyer_prop.matching', compact('data2'));
+    }
 
     function fetch(Request $request) {
         $id = $request->get('select');
@@ -121,7 +192,6 @@ class BuyerPropController extends Controller
         $request->merge([ 
             'nearby_place' => implode(',', (array) $request->get('nearby_place'))
         ]);
-
 
         BuyerProp::create($request->all());
 

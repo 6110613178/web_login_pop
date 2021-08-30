@@ -142,6 +142,12 @@
                                 {{ $buyerProp->price_range_max }}
                             </div>
                         </div>
+                        <div class="card p-3">
+                            <div class="card-text">
+                                <strong>!!!!!!!!!</strong>
+                                {{ $buyerProp }}
+                            </div>
+                        </div>
                     </div>
 
                 </div>

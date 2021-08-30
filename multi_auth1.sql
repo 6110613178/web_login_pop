@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2021 at 10:18 AM
+-- Generation Time: Jul 30, 2021 at 09:55 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `multi_auth1`
+-- Database: `multi_auth10`
 --
 
 -- --------------------------------------------------------
@@ -1061,53 +1061,19 @@ INSERT INTO `bts` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buyerproperty`
---
-
-CREATE TABLE `buyerproperty` (
-  `id` int(11) NOT NULL,
-  `property_type` text NOT NULL,
-  `project_name` text NOT NULL,
-  `type` text NOT NULL,
-  `floor_num` int(11) NOT NULL,
-  `bedroom_num` int(11) NOT NULL,
-  `bathroom_num` int(11) NOT NULL,
-  `kitchen_num` int(11) NOT NULL,
-  `parking_num` int(11) NOT NULL,
-  `livingroom_num` int(11) NOT NULL,
-  `furniture` text NOT NULL,
-  `usable_area_min` int(11) NOT NULL,
-  `usable_area_max` int(11) NOT NULL,
-  `area_min` int(11) NOT NULL,
-  `area_max` int(11) NOT NULL,
-  `alley` text NOT NULL,
-  `road` text NOT NULL,
-  `sub_district` text NOT NULL,
-  `district` text NOT NULL,
-  `province` text NOT NULL,
-  `nearby_place` text NOT NULL,
-  `price_range_min` int(11) NOT NULL,
-  `price_range_max` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `buyerproperty`
---
-
-INSERT INTO `buyerproperty` (`id`, `property_type`, `project_name`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`) VALUES
-(7, 'บ้านเดี่ยว', 'เทส', 'มือ1', 1, 1, 1, 1, 1, 1, 'ครบ', 1, 100, 1, 100, 'เทส', 'เทส', 'เทส', 'เทส', 'เทส', 'เทส', 1, 1000000);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `buyer_props`
 --
 
 CREATE TABLE `buyer_props` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `property` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sell_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city_plan_color` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `area_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `business_license` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buy_with_machine` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `floor_num` int(11) NOT NULL,
   `bedroom_num` int(11) NOT NULL,
@@ -1128,6 +1094,7 @@ CREATE TABLE `buyer_props` (
   `nearby_place` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `price_range_min` int(11) NOT NULL,
   `price_range_max` int(11) NOT NULL,
+  `agent_welcome` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1136,8 +1103,18 @@ CREATE TABLE `buyer_props` (
 -- Dumping data for table `buyer_props`
 --
 
-INSERT INTO `buyer_props` (`id`, `property`, `property_type`, `project_name`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `created_at`, `updated_at`) VALUES
-(1, 'บ้าน', 'บ้านเดี่ยว', 'LnH', 'มือ 1', 2, 3, 2, 1, 1, 1, 'ครบ', 100, 200, 100, 200, '56', 'Ramindra', 'ท่าแร้ง', 'เขตบางเขน', '1', 'โรงเรียน', 500000, 5000000, '2021-07-09 00:56:54', '2021-07-09 00:56:54');
+INSERT INTO `buyer_props` (`id`, `property`, `sell_type`, `property_type`, `project_name`, `city_plan_color`, `area_type`, `business_license`, `buy_with_machine`, `type`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area_min`, `usable_area_max`, `area_min`, `area_max`, `alley`, `road`, `sub_district`, `district`, `province`, `nearby_place`, `price_range_min`, `price_range_max`, `agent_welcome`, `created_at`, `updated_at`) VALUES
+(1, 'บ้าน', 'ขายเซ้ง', 'ทาวน์เฮาส์/ทาวน์โฮม', 'House', '-', '-', '-', '-', 'มือ 2', 1, 1, 1, 1, 1, 1, 'ครบ', 100, 500, 100, 500, '56', 'ประเวศ', '*บางซื่อ', 'เขตดุสิต', 'กรุงเทพมหานคร', 'Airport Link', 500000, 5000000, 'ใช่', '2021-07-28 22:07:09', '2021-07-28 22:07:09'),
+(2, 'บ้าน', 'ขายเซ้ง', 'บ้านเดี่ยว', 'Dai', '-', '-', '-', '-', 'มือ 1', 1, 0, 0, 0, 0, 1, 'ครบ', 100, 500, 100, 200, '56', '1', 'สะพานหิน', 'นาดี', 'ปราจีนบุรี', 'Airport Link', 500000, 5000000, 'ใช่', '2021-07-28 22:09:09', '2021-07-28 22:09:09'),
+(3, 'บ้าน', 'เช่า', 'บ้านแฝด', 'Last', '-', '-', '-', '-', 'มือ 1', 1, 1, 0, 0, 1, 1, 'ครบ', 100, 500, 100, 200, '56', 'Ramindra', 'คลองต้นไทร', 'เขตคลองสาน', 'กรุงเทพมหานคร', 'Airport Link', 50, 5000000, 'ใช่', '2021-07-28 22:12:01', '2021-07-28 22:12:01'),
+(4, 'บ้าน', 'ขาย', 'บ้านเดี่ยว', '4Ence', '-', '-', '-', '-', 'มือ 1', 1, 0, 1, 1, 0, 1, 'ครบ', 50, 50, 100, 100, '56', 'Ramindra', 'สามวาตะวันตก', 'เขตคลองสามวา', 'กรุงเทพมหานคร', 'BTS,MRT,Airport Link', 500000, 5000000, 'ใช่', '2021-07-28 22:14:27', '2021-07-28 22:14:27'),
+(5, 'โรงแรม', 'เช่า', 'โรงแรมขนาดใหญ่', 'Hotel', '-', '-', '-', '-', 'มือ 1', 3, 3, 3, 3, 3, 3, 'a', 100, 200, 50, 50, '56', 'Ramindra', 'คลองต้นไทร', 'เขตคลองสาน', 'กรุงเทพมหานคร', 'สนามบิน,มหาวิทยาลัย', 50, 5000000, 'ใช่', '2021-07-28 22:38:07', '2021-07-28 22:38:07'),
+(6, 'บ้าน', 'ขายเซ้ง', 'ทาวน์เฮาส์/ทาวน์โฮม', 'Pre', '-', '-', '-', '-', 'มือ 1', 1, 1, 1, 1, 1, 1, 'a', 50, 500, 50, 500, '56', '55', 'ดินแดง', 'เขตดินแดง', 'กรุงเทพมหานคร', 'supermarket,ห้างสรรพสินค้า,BTS,MRT', 50, 5000000, 'ใช่', '2021-07-29 20:30:49', '2021-07-29 20:30:49'),
+(7, 'อาคารพาณิชย์', 'หาซื้อ', 'อาคารพาณิชย์ 1 คูหา', 'Comm', '-', '-', '-', '-', 'มือ 1', 1, 1, 1, 0, 0, 0, 'ครบ', 100, 500, 100, 100, '56', 'Ramindra', '*ศรีษะจรเข้ใหญ่', 'บางพลี', 'สมุทรปราการ', 'BTS,MRT', 500000, 5000000, 'ใช่', '2021-07-29 20:58:18', '2021-07-29 20:58:18'),
+(8, 'โกดัง/โรงงาน', 'หาเซ้ง', 'โกดัง', '-', '-', 'ถนนกว้าง', 'ใช่', 'ใช่', '-', 0, 0, 0, 0, 0, 0, '-', 0, 0, 100, 200, '56', 'Ramindra', 'คลองต้นไทร', 'เขตคลองสาน', 'กรุงเทพมหานคร', 'สนามบิน,ทางด่วน,โรงเรียน', 500000, 5000000, 'ใช่', '2021-07-29 23:07:19', '2021-07-29 23:07:19'),
+(9, 'โรงแรม', 'หาซื้อ', 'โรงแรม 2 ดาว', 'LnH', '-', '-', '-', '-', 'มือ 1', 1, 0, 0, 0, 0, 0, '-', 100, 500, 100, 200, '56', 'ประเวศ', 'คลองสาน', 'เขตคลองสาน', 'กรุงเทพมหานคร', 'supermarket,ห้างสรรพสินค้า', 500000, 5000000, 'ใช่', '2021-07-29 23:42:22', '2021-07-29 23:42:22'),
+(10, 'บ้าน', 'ขาย', 'บ้านเดี่ยว', 'asd', '-', '-', '-', '-', 'มือ 1', 1, 0, 0, 1, 0, 1, 'ครบ', 100, 200, 100, 200, '111', '111', 'บ้านพร้าว', 'บ้านนา', 'นครนายก', 'supermarket,ห้างสรรพสินค้า', 500000, 5000000, 'ใช่', '2021-07-30 00:08:18', '2021-07-30 00:08:18'),
+(11, 'โรงแรม', 'หาซื้อ', 'โรงแรม 5 ดาว', '็Hotel', '-', '-', '-', '-', 'มือ 1', 1, 0, 0, 0, 0, 0, '-', 100, 500, 100, 200, '56', 'Ramindra', 'คูบางหลวง', 'ลาดหลุมแก้ว', 'ปทุมธานี', 'BTS,MRT,Airport Link,โรงเรียน,มหาวิทยาลัย', 500000, 5000000, 'ใช่', '2021-07-30 00:24:59', '2021-07-30 00:24:59');
 
 -- --------------------------------------------------------
 
@@ -10077,7 +10054,19 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2021_06_21_123428_create_buyer_properties_table', 2),
 (5, '2021_06_21_130510_create_contacts_table', 3),
-(6, '2021_06_24_085203_buyer_prop_crud', 4);
+(6, '2021_06_24_085203_buyer_prop_crud', 4),
+(7, '2021_07_12_071002_seller_prop_crud', 5),
+(8, '2021_07_12_095331_seller_prop_crud', 6),
+(9, '2021_07_13_080258_seller_prop_crud', 7),
+(10, '2021_07_13_203317_buyer_prop_crud', 8),
+(11, '2021_07_15_062149_buyer_prop_crud', 9),
+(12, '2021_07_19_081900_seller_prop_crud', 10),
+(13, '2021_07_19_083426_seller_prop_crud', 11),
+(14, '2021_07_19_104825_buyer_prop_crud', 12),
+(15, '2021_07_19_120738_seller_prop_crud', 13),
+(16, '2021_07_20_083030_buyer_prop_crud', 14),
+(17, '2021_07_20_131203_seller_prop_crud', 15),
+(18, '2021_07_20_131549_buyer_prop_crud', 16);
 
 -- --------------------------------------------------------
 
@@ -10206,6 +10195,87 @@ INSERT INTO `provinces` (`id`, `code`, `name_th`, `name_en`, `geography_id`) VAL
 (75, '95', 'ยะลา', 'Yala', 6),
 (76, '96', 'นราธิวาส', 'Narathiwat', 6),
 (77, '97', 'บึงกาฬ', 'buogkan', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seller_props`
+--
+
+CREATE TABLE `seller_props` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `seller_status` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sell_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `topic_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `detail` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `property_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `project_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city_plan_color` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `area_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sell_with_machine` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `floor_num` int(11) NOT NULL,
+  `bedroom_num` int(11) NOT NULL,
+  `bathroom_num` int(11) NOT NULL,
+  `kitchen_num` int(11) NOT NULL,
+  `parking_num` int(11) NOT NULL,
+  `livingroom_num` int(11) NOT NULL,
+  `furniture` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `usable_area` int(11) NOT NULL,
+  `area` int(11) NOT NULL,
+  `land_width` int(11) NOT NULL,
+  `land_height` int(11) NOT NULL,
+  `holding_pattern` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tranfer_date_month` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tranfer_date_year` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `property_code` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ownership_document` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `business_license` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alley` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `road` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_district` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `district` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `province` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `google_map_link` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nearby_place` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nearby_bts` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nearby_airport_link` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nearby_mrt` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `inside_facility` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `furniture_thing` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `special_properties` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `central_facility` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_zone_protection_room` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_balcony` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_bedroom` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_storageroom` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_office` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_kitchen` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_garage` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` int(11) NOT NULL,
+  `price_per_month` int(11) NOT NULL,
+  `price_central` int(11) NOT NULL,
+  `tranfer_fee_person_responsible` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `promotion` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `property_picture` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `floor_plan_picture` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `property_video` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `property_video_url` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `agent_welcome` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `post_allow` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `seller_props`
+--
+
+INSERT INTO `seller_props` (`id`, `property`, `seller_status`, `sell_type`, `topic_name`, `detail`, `property_type`, `project_name`, `city_plan_color`, `area_type`, `type`, `sell_with_machine`, `floor_num`, `bedroom_num`, `bathroom_num`, `kitchen_num`, `parking_num`, `livingroom_num`, `furniture`, `usable_area`, `area`, `land_width`, `land_height`, `holding_pattern`, `tranfer_date_month`, `tranfer_date_year`, `property_code`, `ownership_document`, `business_license`, `alley`, `road`, `sub_district`, `district`, `province`, `google_map_link`, `nearby_place`, `nearby_bts`, `nearby_airport_link`, `nearby_mrt`, `inside_facility`, `furniture_thing`, `special_properties`, `central_facility`, `add_zone_protection_room`, `add_balcony`, `add_bedroom`, `add_storageroom`, `add_office`, `add_kitchen`, `add_garage`, `price`, `price_per_month`, `price_central`, `tranfer_fee_person_responsible`, `promotion`, `property_picture`, `floor_plan_picture`, `property_video`, `property_video_url`, `agent_welcome`, `post_allow`, `created_at`, `updated_at`) VALUES
+(1, 'บ้าน', 'เจ้าของทรัพย์', 'เช่า', 'df', 'dsf', 'บ้านเดี่ยว', 'asd', '-', '-', 'มือ 1', '-', 1, 0, 1, 1, 1, 1, 'ครบ', 50, 500, 0, 0, 'คนสัญชาติไทย', 'มีนาคม', '2000', '1234', 'Background 3.jpg', '-', '56', 'ประเวศ', '*บางเสาธง', 'บางพลี', 'สมุทรปราการ', '1234', '1234', 'ปู้เจ้า', 'มักกะสัน', 'บางไผ่', 'พัดลม', 'โทรศัพท์', 'สระว่ายน้ำส่วนตัว', 'Shuttle Bus Service', 'ห้องรับประทานอาหาร', 'ระเบียงด้านข้าง', 'เพิ่มห้องนอนแขก', 'ชั้นบน', 'เพิ่มห้องพนักงาน', 'ลงเสาเข็ม', 'ไม่ลงเสาเข็ม', 50, 500, 500, 'ผู้ขาย', '1234', 'Background_4.jpg', 'Background_4.jpg', 'Background 1.jpg', '1234', 'ใช่', '-', '2021-07-29 01:52:06', '2021-07-29 01:52:06'),
+(2, 'บ้าน', 'เจ้าของทรัพย์', 'ขาย', '1234', '1234', 'บ้านเดี่ยว', '1234', '-', '-', 'มือ 1', '-', 1, 1, 1, 0, 1, 0, 'ครบ', 1234, 1234, 0, 0, 'คนสัญชาติไทย', 'มกราคม', '2543', '1234', 'Background 3.jpg', '-', '1', '1', 'ทรายกองดินใต้', 'เขตคลองสามวา', 'กรุงเทพมหานคร', '1234', 'supermarket,1234', 'คูคต', 'รามคำแหง', 'ตลาดบางใหญ่', 'เครื่องปรับอากาศ', 'โซฟา', 'เพนท์เฮ้าส์', 'ลิฟต์', 'ห้องนอนเพิ่ม', 'ระเบียงด้านหน้า', 'เพิ่มจากเดิม', 'ด้านหน้า', 'เพิ่มห้องผู้บริหาร', 'ห้องปิด', 'ด้านหน้า', 50, 500, 500, 'ผู้ซื้อ', '1234', 'Background 3.jpg', 'Background 3.jpg', 'Background 3.jpg', '1234', 'ใช่', '-', '2021-07-29 02:19:24', '2021-07-29 02:19:24'),
+(3, 'บ้าน', 'เจ้าของทรัพย์', 'ขาย', '1234', '1234', 'บ้านเดี่ยว', 'Dai', '-', '-', 'มือ 1', '-', 1, 0, 1, 1, 1, 0, 'ครบ', 22, 222, 0, 0, 'คนสัญชาติไทย', 'มกราคม', '2543', '1234', 'Background 3.jpg', '-', '1', '1', 'คลองต้นไทร', 'เขตคลองสาน', 'กรุงเทพมหานคร', '1234', 'supermarket,1234', 'คูคต', 'ราชปรารภ', 'วงศ์สว่าง', 'เครื่องปรับอากาศ,พัดลม,เครื่องฟอกอากาศ/กรองอากาศ,เครื่องทำน้ำอุ่น,wifi', 'โซฟา', 'เพนท์เฮ้าส์', 'อินเตอร์เน็ตคาเฟ่ภายในอาคาร', 'ห้องนอนเพิ่ม', 'ระเบียงด้านหลัง', 'เพิ่มห้องเด็กเล็ก', 'ด้านหลัง', 'เพิ่มห้องประชุม', 'แยกนอกตัวอาคาร', 'แยกนอกตัวอาคาร', 123, 1234, 1234, 'ผู้ขาย', '1234', 'Background 3.jpg', 'Background_4.jpg', 'Background 3.jpg', '1234', 'ใช่', '-', '2021-07-29 02:28:17', '2021-07-29 02:28:17');
 
 -- --------------------------------------------------------
 
@@ -10346,6 +10416,80 @@ INSERT INTO `sub_bts` (`id`, `name`, `station_code`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sub_mrt`
+--
+
+CREATE TABLE `sub_mrt` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `station_code` text NOT NULL,
+  `type` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sub_mrt`
+--
+
+INSERT INTO `sub_mrt` (`id`, `name`, `station_code`, `type`) VALUES
+(1, 'ท่าพระ(จรัญสนิทวงศ์)', 'BL01', 3),
+(2, 'จรัญฯ 13', 'BL02', 3),
+(3, 'ไฟฉาย', 'BL03', 3),
+(4, 'บางขุนนนท์', 'BL04', 3),
+(5, 'บางยี่ขัน', 'BL05', 3),
+(6, 'สิรินธร', 'BL06', 3),
+(7, 'บางพลัด', 'BL07', 3),
+(8, 'บางอ้อ', 'BL08', 3),
+(9, 'บางโพ', 'BL09', 3),
+(10, 'เตาปูน', 'BL10', 3),
+(11, 'บางซื่อ', 'BL11', 3),
+(12, 'กำแพงเพชร', 'BL12', 3),
+(13, 'สวนจตุจักร', 'BL13', 3),
+(14, 'พหลโยธิน', 'BL14', 3),
+(15, 'ลาดพร้าว', 'BL15', 3),
+(16, 'รัชดาภิเษก', 'BL16', 3),
+(17, 'สุทธิสาร', 'BL17', 3),
+(18, 'ห้วยขวาง', 'BL18', 3),
+(19, 'ศูนย์วัฒนธรรมแห่งประเทศไทย', 'BL19', 3),
+(20, 'พระราม 9', 'BL20', 3),
+(21, 'เพชรบุรี', 'BL21', 3),
+(22, 'สุขุมวิท', 'BL22', 3),
+(23, 'ศูนย์การประชุมแห่งชาติสิริกิติ์', 'BL23', 3),
+(24, 'คลองเตย', 'BL24', 3),
+(25, 'ลุมพินี', 'BL25', 3),
+(26, 'สีลม', 'BL26', 3),
+(27, 'สามย่าน', 'BL27', 3),
+(28, 'หัวลำโพง', 'BL28', 3),
+(29, 'วัดมังกร', 'BL29', 3),
+(30, 'สามยอด', 'BL30', 3),
+(31, 'สนามไชย', 'BL31', 3),
+(32, 'อิสรภาพ', 'BL32', 3),
+(33, 'ท่าพระ(เพชรเกษม)', 'BL01', 3),
+(34, 'บางไผ่', 'BL33', 3),
+(35, 'บางหว้า', 'BL34', 3),
+(36, 'เพชรเกษม 48', 'BL35', 3),
+(37, 'ภาษีเจริญ', 'BL36', 3),
+(38, 'บางแค', 'BL37', 3),
+(39, 'หลักสอง', 'BL38', 3),
+(40, 'คลองบางไผ่', 'PP01', 4),
+(41, 'ตลาดบางใหญ่', 'PP02', 4),
+(42, 'สามแยกบางใหญ่', 'PP03', 4),
+(43, 'บางพลู', 'PP04', 4),
+(44, 'บางรักใหญ่', 'PP05', 4),
+(45, 'บางรักน้อย-ท่าอิฐ', 'PP06', 4),
+(46, 'ไทรม้า', 'PP07', 4),
+(47, 'สะพานพระนั่งเกล้า', 'PP08', 4),
+(48, 'แยกนนทบุรี 1 ', 'PP09', 4),
+(49, 'บางกระสอ', 'PP10', 4),
+(50, 'ศูนย์ราชการนนทบุรี', 'PP11', 4),
+(51, 'กระทรวงสาธารณสุข', 'PP12', 4),
+(52, 'แยกติวานนท์', 'PP13', 4),
+(53, 'วงศ์สว่าง', 'PP14', 4),
+(54, 'บางซ่อน', 'PP15', 4),
+(55, 'เตาปูน', 'PP16', 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -10387,12 +10531,6 @@ ALTER TABLE `amphures`
 -- Indexes for table `bts`
 --
 ALTER TABLE `bts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `buyerproperty`
---
-ALTER TABLE `buyerproperty`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -10445,9 +10583,21 @@ ALTER TABLE `provinces`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `seller_props`
+--
+ALTER TABLE `seller_props`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sub_bts`
 --
 ALTER TABLE `sub_bts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sub_mrt`
+--
+ALTER TABLE `sub_mrt`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -10474,16 +10624,10 @@ ALTER TABLE `bts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `buyerproperty`
---
-ALTER TABLE `buyerproperty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
 -- AUTO_INCREMENT for table `buyer_props`
 --
 ALTER TABLE `buyer_props`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -10501,7 +10645,7 @@ ALTER TABLE `geographies`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `mrt`
@@ -10516,10 +10660,22 @@ ALTER TABLE `provinces`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
+-- AUTO_INCREMENT for table `seller_props`
+--
+ALTER TABLE `seller_props`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `sub_bts`
 --
 ALTER TABLE `sub_bts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+
+--
+-- AUTO_INCREMENT for table `sub_mrt`
+--
+ALTER TABLE `sub_mrt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `users`

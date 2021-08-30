@@ -25,13 +25,36 @@
                         @csrf
                         @method('PUT')
 
-                        <label for="property_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
+                        <input type="hidden" name="property" value="บ้าน">
+
+                        <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="buy_with_machine" value="-">
+
+                        <label for="sell_type" class="col-md-4 col-form-label text-md-right" style="font-size:30px;">{{ __('ข้อมูลโครงการ') }}</label>
+
+                        <div class="form-group row">
+                            <label for="sell_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทอสังหาริมทรัพย์') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="checkbox" name="sell_type" value="ขาย" <?php if ($buyerProp->sell_type=="ขาย") echo "checked";?>> ขาย
+                                <input type="checkbox" name="sell_type" value="เช่า" <?php if ($buyerProp->sell_type=="เช่า") echo "checked";?>> เช่า
+                                <input type="checkbox" name="sell_type" value="ขายเซ้ง" <?php if ($buyerProp->sell_type=="ขายเซ้ง") echo "checked";?>> ขายเซ้ง
+
+                                <!-- @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror -->
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="property_type" class="col-md-4 col-form-label text-md-right">{{ __('ประเภทอสังหาริมทรัพย์') }}</label>
 
                             <div class="col-md-6">
-                                <input type="checkbox" name="property_type" value="บ้านเดี่ยว" <?php if ($buyerProp->property_type=="บ้านเดี่ยว") echo "checked";?>> บ้านเดี่ยว  
+                                <input type="checkbox" name="property_type" value="บ้านเดี่ยว" <?php if ($buyerProp->property_type=="บ้านเดี่ยว") echo "checked";?>> บ้านเดี่ยว
                                 <input type="checkbox" name="property_type" value="บ้านแฝด" <?php if ($buyerProp->property_type=="บ้านแฝด") echo "checked";?>> บ้านแฝด  
                                 <input type="checkbox" name="property_type" value="ทาวน์เฮาส์/ทาวน์โฮม" <?php if ($buyerProp->property_type=="ทาวน์เฮาส์/ทาวน์โฮม") echo "checked";?>> ทาวน์เฮาส์/ทาวน์โฮม
 
@@ -355,6 +378,10 @@
                         <p>*คำแนะนำในการค้นหาอสังหาริมทรัพย์</p>
 
                         <div class="form-group row mb-0">
+                            <div class="col align-items-end p-0 m-0">
+                                <input class="m-1" name="agent_welcome" type="checkbox" value="ใช่" <?php if ($buyerProp->agent_welcome=="ใช่") echo "checked";?>>
+                                ยินดีรับเอเจ้นท์
+                            </div>
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Update') }}

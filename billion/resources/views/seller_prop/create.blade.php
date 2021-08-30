@@ -540,8 +540,8 @@
                                 <input name="nearby_place[]" type="checkbox" value="สนามบิน"> สนามบิน
                                 <input name="nearby_place[]" type="checkbox" value="ทางด่วน"> ทางด่วน
                                 <input name="nearby_place[]" type="checkbox" value="โรงเรียน"> โรงเรียน
-                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย,
-                                อื่นๆ <input name="nearby_place[]" type="text"> 
+                                <input name="nearby_place[]" type="checkbox" value="มหาวิทยาลัย"> มหาวิทยาลัย
+                                <!-- อื่นๆ <input name="nearby_place[]" type="text">  -->
 
                             </div>
                         </div>

@@ -81,6 +81,7 @@
                                     <form action="{{ route('buyer_prop.destroy', $value->id) }}" method="POST"  align="right">
                                         <a href="{{ route('buyer_prop.show', $value->id) }}" class="btn_cus"><?php echo file_get_contents("img/eye.svg"); ?></a>
                                         <a href="{{ route('buyer_prop.edit', $value->id) }}" class="btn_cus" > <?php echo file_get_contents("img/pencil.svg"); ?></a>
+                                        <a href="{{ route('buyer_prop.matching', $value->id) }}" class="btn_cus" > <?php echo file_get_contents("img/eye.svg"); ?></a>
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-delete" style="padding-right: 0px;padding-left: 0px;"><?php echo file_get_contents("img/delete.svg"); ?></button>

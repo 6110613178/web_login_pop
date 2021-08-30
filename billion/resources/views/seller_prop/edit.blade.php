@@ -183,6 +183,15 @@
                         @method('PUT');
 
                         <input type="hidden" name="property" value="บ้าน">
+                        <input type="hidden" name="post_allow" value="-">
+
+                        <input type="hidden" name="city_plan_color" value="-">
+                        <input type="hidden" name="area_type" value="-">
+                        <input type="hidden" name="land_width" value="0">
+                        <input type="hidden" name="land_height" value="0">
+                        <input type="hidden" name="sell_with_machine" value="-">
+                        <input type="hidden" name="business_license" value="-">
+                        <input type="hidden" name="floor_plan_picture" value="-">
 
                         <!-- ประกาศ -->
 
@@ -192,7 +201,7 @@
                             <label for="seller_status" class="col-md-4 col-form-label text-md-right">{{ __('สถานะผู้ประกาศ') }}</label>
 
                             <div class="col-md-6">
-                                <input type="checkbox" name="seller_status" value="เจ้าของทรัพย์" <?php if ($sellerProp->seller_status=="เจ้าของทรัพย์ ") echo "checked";?>> เจ้าของทรัพย์ 
+                                <input type="checkbox" name="seller_status" value="เจ้าของทรัพย์" <?php if ($sellerProp->seller_status=="เจ้าของทรัพย์") echo "checked";?>> เจ้าของทรัพย์ 
                                 <input type="checkbox" name="seller_status" value="เอเจ้นท์" <?php if ($sellerProp->seller_status=="เอเจ้นท์") echo "checked";?>> เอเจ้นท์
 
                                 <!-- @error('name')
@@ -344,6 +353,30 @@
                                 <input id="area" type="text" value="{{ $sellerProp->area }}" class="form-control" name="area" placeholder="Area">
 
                             </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="tranfer_date" class="col-md-4 col-form-label text-md-right">{{ __('วันที่โอนกรรมสิทธิ์') }}</label>
+
+                            <div class="col-md-6">
+                                <!-- <input id="tranfer_date" type="number" class="form-control" name="transfer_date_month" placeholder="Month" min="1" max="12"> -->
+                                <select class="form-control" name="tranfer_date_month" id="tranfer_date_month">
+                                    <option value="{{ $sellerProp->tranfer_date_year }}">เดือนเดิม ไม่รู้ต้องใส่ยังไง</option>
+                                    <option value="มกราคม">มกราคม</option>
+                                    <option value="กุมภาพันธ์">กุมภาพันธ์</option>
+                                    <option value="มีนาคม">มีนาคม</option>
+                                    <option value="เมษายน">เมษายน</option>
+                                    <option value="พฤษภาคม">พฤษภาคม</option>
+                                    <option value="มิถุนายน">มิถุนายน</option>
+                                    <option value="กรกฎาคม">กรกฎาคม</option>
+                                    <option value="สิงหาคม">สิงหาคม</option>      
+                                    <option value="กันยายน">กันยายน</option> 
+                                    <option value="ตุลาคม">ตุลาคม</option> 
+                                    <option value="พฤศจิกายน">พฤศจิกายน</option> 
+                                    <option value="ธันวาคม">ธันวาคม</option>                               
+                                </select>                          
+                            </div>
+                                <input id="tranfer_date_year" type="number" class="form-control" name="tranfer_date_year" placeholder="Year" min="1000" max="3000" value="{{ $sellerProp->tranfer_date_year }}">
                         </div>
 
                         <div class="form-group row">
