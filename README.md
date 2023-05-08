@@ -1,12 +1,11 @@
 # web_login_pop
 เว็บแอพพลิเคชั่นให้บริการซื้อ/ขายอสังหาริมทรัพย์  
-(billion main)
 
 ## Project setup
 ### Environment setup
 [Xampp Download](https://www.apachefriends.org/download.html)  
 [Composer Download](https://getcomposer.org/download/)
-(*check 'Add this PHP to path')  
+(*confirm 'Add this PHP to path')  
 Go to Project directory.
 ```
 cd billion
@@ -28,5 +27,5 @@ php artisan serve
 See web-application [http://localhost:8000/](http://localhost:8000/)   
 
 ### Tester ID (Buyer status)
-Email: user@user.com
+Email: user@user.com   
 Password: 1234
