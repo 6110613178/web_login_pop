@@ -1,5 +1,5 @@
 # web_login_pop
-เว็บแอพพลิเคชั่นให้บริการซื้อ/ขายอสังหาริมทรัพย์  
+Trading property web-application
 
 ## Project setup
 ### Environment setup
